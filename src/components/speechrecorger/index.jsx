@@ -11,13 +11,12 @@ function Speechkit() {
   const [textvalue, settextvalue] = useState("hello");
   const [mistakes, setMistakes] = useState(false);
   const { transcript, listening, browserSupportsSpeechRecognition } =
-    useSpeechRecognition();
-
+    useSpeechRecognition({ continuous: true });
   if (!browserSupportsSpeechRecognition) {
     return <span>Your browser does not support speech to text converter</span>;
   }
 
-  if (transcript == textvalue) {
+  if (transcript === textvalue) {
     // setMistakes(!mistakes);
     console.log(transcript);
   } else {
@@ -40,9 +39,13 @@ function Speechkit() {
       </div>
       <div className="voice_section">
         <button
-          onClick={() =>
-            SpeechRecognition.startListening({ language: "en-US" })
+          onMouseDown={() =>
+            SpeechRecognition.startListening({
+              continuous: true,
+              language: "en-US",
+            })
           }
+          onMouseUp={() => SpeechRecognition.stopListening()}
           id="convert"
           className="convert"
         >
