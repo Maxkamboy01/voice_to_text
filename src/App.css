@@ -23,7 +23,7 @@ body {
 }
 
 .text_to_speech-box {
-  width: auto;
+  min-width: 500px;
   min-height: 90px;
   padding: 20px 30px;
   border: 1px solid grey;

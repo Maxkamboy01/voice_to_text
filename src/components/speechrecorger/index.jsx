@@ -10,7 +10,7 @@ import SpeechRecognition, {
 
 function Speechkit() {
   const { speak, voices } = useSpeechSynthesis({ lang: "en" });
-  const [textvalue, settextvalue] = useState("hello");
+  const [textvalue, settextvalue] = useState("The quick brown fox jumps over the lazy dog");
   const [resetvalue, setresetvalue] = useState(false);
   const [mistakes, setMistakes] = useState(false);
   const {
@@ -35,7 +35,6 @@ function Speechkit() {
     SpeechRecognition.startListening({
       continuous: true,
       language: "en-US",
-      resetTranscript: true,
     });
     setresetvalue(false);
   };
@@ -48,7 +47,7 @@ function Speechkit() {
   return (
     <div className="test_container">
       <div
-        onClick={() => speak({ text: textvalue, voice: voices[5] })}
+        onClick={() => speak({ text: textvalue, voice: voices[6] })}
         className="text_to_speech-box"
       >
         <GoMegaphone className="megaphone_btn" />
