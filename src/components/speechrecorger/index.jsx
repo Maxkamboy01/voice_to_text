@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { useSpeechSynthesis } from "react-speech-kit";
 // import { FaMicrophone } from "react-icons/fa";
 import { GoMegaphone } from "react-icons/go";
+import { BiReset } from "react-icons/bi";
+
 import SpeechRecognition, {
   useSpeechRecognition,
 } from "react-speech-recognition";
@@ -9,9 +11,14 @@ import SpeechRecognition, {
 function Speechkit() {
   const { speak, voices } = useSpeechSynthesis({ lang: "en" });
   const [textvalue, settextvalue] = useState("hello");
+  const [resetvalue, setresetvalue] = useState(false);
   const [mistakes, setMistakes] = useState(false);
-  const { transcript, listening, browserSupportsSpeechRecognition } =
-    useSpeechRecognition({ continuous: true });
+  const {
+    transcript,
+    listening,
+    resetTranscript,
+    browserSupportsSpeechRecognition,
+  } = useSpeechRecognition({ continuous: true });
   if (!browserSupportsSpeechRecognition) {
     return <span>Your browser does not support speech to text converter</span>;
   }
@@ -22,6 +29,21 @@ function Speechkit() {
   } else {
     console.log("not working");
   }
+
+
+  const speechstart = () => {
+    SpeechRecognition.startListening({
+      continuous: true,
+      language: "en-US",
+      resetTranscript: true,
+    });
+    setresetvalue(false);
+  };
+
+  const speechend = () => {
+    SpeechRecognition.stopListening();
+    setresetvalue(true)
+  };
 
   return (
     <div className="test_container">
@@ -39,18 +61,20 @@ function Speechkit() {
       </div>
       <div className="voice_section">
         <button
-          onMouseDown={() =>
-            SpeechRecognition.startListening({
-              continuous: true,
-              language: "en-US",
-            })
-          }
-          onMouseUp={() => SpeechRecognition.stopListening()}
+          onMouseDown={speechstart}
+          onMouseUp={speechend}
+          onTouchStart={speechstart}
+          onTouchEnd={speechend}
           id="convert"
           className="convert"
         >
           Voice to Text{/* {mistakes ? "correct" : "mistake"} */}
         </button>
+        {resetvalue ? (
+          <BiReset className="reset" onClick={resetTranscript}></BiReset>
+        ) : (
+          ""
+        )}
         {listening ? (
           <>
             <div className="animation" />
