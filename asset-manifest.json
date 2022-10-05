@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/voice_to_text/static/css/main.246038ec.css",
+    "main.js": "/voice_to_text/static/js/main.1bfa064e.js",
+    "static/js/787.cae70fee.chunk.js": "/voice_to_text/static/js/787.cae70fee.chunk.js",
+    "index.html": "/voice_to_text/index.html",
+    "main.246038ec.css.map": "/voice_to_text/static/css/main.246038ec.css.map",
+    "main.1bfa064e.js.map": "/voice_to_text/static/js/main.1bfa064e.js.map",
+    "787.cae70fee.chunk.js.map": "/voice_to_text/static/js/787.cae70fee.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.246038ec.css",
+    "static/js/main.1bfa064e.js"
+  ]
+}
