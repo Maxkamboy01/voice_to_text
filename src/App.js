@@ -1,9 +1,9 @@
 import './App.css';
-import SpeechRecorder from "./components/speechrecorger/index"
+import MainPage from './pages/MainPage/index';
 function App() {
   return (
     <div>
-      <SpeechRecorder/>
+      <MainPage/>
     </div>
   );
 }
