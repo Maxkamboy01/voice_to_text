@@ -1,15 +1,18 @@
 {
   "files": {
-    "main.css": "/voice_to_text/static/css/main.09007f04.css",
-    "main.js": "/voice_to_text/static/js/main.2c36f06e.js",
+    "main.css": "/voice_to_text/static/css/main.89757d33.css",
+    "main.js": "/voice_to_text/static/js/main.538d78c9.js",
     "static/js/787.cae70fee.chunk.js": "/voice_to_text/static/js/787.cae70fee.chunk.js",
+    "static/media/boy-girl.jpg": "/voice_to_text/static/media/boy-girl.4dc19e249bfe5d9f5506.jpg",
+    "static/media/cancel.png": "/voice_to_text/static/media/cancel.1583723861a66fb05605.png",
+    "static/media/checked.png": "/voice_to_text/static/media/checked.6f298cca57a5a8b36055.png",
     "index.html": "/voice_to_text/index.html",
-    "main.09007f04.css.map": "/voice_to_text/static/css/main.09007f04.css.map",
-    "main.2c36f06e.js.map": "/voice_to_text/static/js/main.2c36f06e.js.map",
+    "main.89757d33.css.map": "/voice_to_text/static/css/main.89757d33.css.map",
+    "main.538d78c9.js.map": "/voice_to_text/static/js/main.538d78c9.js.map",
     "787.cae70fee.chunk.js.map": "/voice_to_text/static/js/787.cae70fee.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.09007f04.css",
-    "static/js/main.2c36f06e.js"
+    "static/css/main.89757d33.css",
+    "static/js/main.538d78c9.js"
   ]
 }
