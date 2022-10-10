@@ -40,19 +40,12 @@ export const NavbarStyle = styled.div`
   }
 
   .logo {
-    font-size: 24px;
-    font-weight: 400;
-    letter-spacing: 0.1em;
-    font-family: "Hubballi", cursive;
+    width: 150px;
     @media (max-width: 768px) {
-      letter-spacing: 0.08em;
+      width: 135px;
     }
     @media (max-width: 512px) {
-      letter-spacing: 0.06em;
-    }
-    .english {
-      color: blue;
-      font-weight: 400;
+      width: 120px;
     }
   }
   .profile {
@@ -187,7 +180,7 @@ export const SidebarStyle = styled.ul`
     padding: 17px 140px 17px 30px;
     border-bottom: 1.8px solid #e5bef3;
     cursor: pointer;
-    @media(max-width: 768px){
+    @media (max-width: 768px) {
       font-size: 18px;
       padding: 15px 84px 15px 25px;
     }

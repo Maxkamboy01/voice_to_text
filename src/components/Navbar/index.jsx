@@ -6,6 +6,7 @@ import { NavbarStyle, SidebarStyle, ProfileStyles } from "./style";
 // IMG
 import { AiOutlineMenu } from "react-icons/ai";
 import Avatar from "../../assets/Frame 18.png";
+import Logo from "../../assets/logo.png"
 // IMG
 
 function Navbar() {
@@ -34,7 +35,7 @@ function Navbar() {
       <NavbarStyle className="navbar">
         <AiOutlineMenu onClick={sidebarHandleclick} className="sidebar_btn" />
         <div className="logo">
-          Fast<span className="english">English</span>
+          <img src={Logo} alt="" />
         </div>
         <div className="profile">
           <img
