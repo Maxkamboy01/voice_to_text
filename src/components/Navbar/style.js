@@ -149,13 +149,13 @@ export const SidebarStyle = styled.ul`
     width: 288px;
     top: 66px;
     padding-bottom: 35px;
-    left: ${(props) => (props.isOpen ? "0" : "-50vw")};
+    left: ${(props) => (props.isOpen ? "0" : "-60vw")};
   }
   @media (max-width: 512px) {
     width: 220px;
     top: 66px;
     padding-bottom: 30px;
-    left: ${(props) => (props.isOpen ? "0" : "-50vw")};
+    left: ${(props) => (props.isOpen ? "0" : "-70vw")};
   }
   .lesson_info {
     font-size: 20px;
