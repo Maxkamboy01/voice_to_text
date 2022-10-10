@@ -1,8 +1,8 @@
 import React from "react";
-import { TestStyle,VoiceSection } from "./style";
-import SpeechRecorder from "../../components/speechrecorger/index"
+import { TestStyle, VoiceSection } from "./style";
+import SpeechRecorder from "../../components/speechrecorger/index";
 // IMAGES
-import Dialogue_img from "../../assets/boy-girl.jpg";
+import Dialogue_img from "../../assets/testpage_guys.png";
 
 function TestsPage() {
   return (
@@ -14,18 +14,16 @@ function TestsPage() {
         </div>
         <div className="images">
           <div className="dialogue_text first_person">
-            {" "}
             Hello! <br />
             My name is <br /> Tom
           </div>
           <img className="dialogue_people" src={Dialogue_img} alt="" />
           <div className="dialogue_text  second_person">
-            {" "}
             Hello! <br /> My name is <br /> Liza
           </div>
         </div>
         <VoiceSection>
-          <SpeechRecorder/>
+          <SpeechRecorder />
         </VoiceSection>
       </div>
     </TestStyle>

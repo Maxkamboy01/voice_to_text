@@ -7,6 +7,12 @@ export const TestStyle = styled.div`
   display: flex;
   justify-content: center;
   padding-bottom: 50px;
+  @media (max-width: 768px) {
+    width: 100vw;
+  }
+  @media (max-width: 512px) {
+    width: 100vw;
+  }
   .container {
     width: 50vw;
     display: flex;
@@ -15,22 +21,61 @@ export const TestStyle = styled.div`
     text-align: center;
     padding-top: 64px;
     font-family: "Ibarra Real Nova", sans-serif;
+    @media (max-width: 768px) {
+      width: 58vw;
+      padding-top: 52px;
+    }
+    @media (max-width: 512px) {
+      width: 66vw;
+      padding-top: 40px;
+    }
     .test_info {
       line-height: 35px;
+      @media (max-width: 768px) {
+        line-height: 34px;
+        margin-bottom: 60px;
+      }
+      @media (max-width: 512px) {
+        line-height: 32px;
+        margin-bottom: 30px;
+      }
+
       .theme {
         font-size: 33px;
         font-weight: 700;
         letter-spacing: 0.1em;
+        @media (max-width: 768px) {
+          font-size: 31px;
+          letter-spacing: 0.08em;
+        }
+        @media (max-width: 512px) {
+          font-size: 29px;
+          letter-spacing: 0.06em;
+        }
       }
       .task {
         font-size: 28px;
         font-weight: 400;
         letter-spacing: 0.1em;
+        @media (max-width: 768px) {
+          font-size: 26px;
+          letter-spacing: 0.07em;
+        }
+        @media (max-width: 512px) {
+          font-size: 24px;
+          letter-spacing: 0.04em;
+        }
       }
     }
     .images {
       margin-top: 70px;
       display: flex;
+      @media (max-width: 768px) {
+        margin-top: 100px;
+      }
+      @media (max-width: 512px) {
+        margin-top: 150px;
+      }
       .dialogue_text {
         width: 200px;
         height: 146px;
@@ -49,17 +94,47 @@ export const TestStyle = styled.div`
         box-shadow: 0 0 10px grey;
         margin-top: -40px;
         font-family: "Ibarra Real Nova", serif;
+        @media (max-width: 768px) {
+          margin-top: -150px;
+          width: 180px;
+          height: 120px;
+          font-size: 22px;
+        }
+        @media (max-width: 512px) {
+          margin-top: -150px;
+          width: 160px;
+          height: 100px;
+          font-size: 20px;
+        }
       }
       .first_person {
         border-bottom-right-radius: 0;
         margin-right: 39px;
+        @media (max-width: 768px) {
+          margin-right: -40px;
+        }
+        @media (max-width: 512px) {
+          margin-right: -70px;
+        }
       }
       .dialogue_people {
         width: 396px;
+        @media (max-width: 768px) {
+          width: 355px;
+        }
+        @media (max-width: 512px) {
+          width: 320px;
+        }
       }
       .second_person {
         border-bottom-left-radius: 0;
-        margin-left: 39px;
+        margin-left: 30px;
+        @media (max-width: 768px) {
+          margin-left: -80px;
+        }
+        @media (max-width: 512px) {
+          margin-left: -130px;
+        }
       }
     }
   }
@@ -68,4 +143,8 @@ export const TestStyle = styled.div`
 export const VoiceSection = styled.div`
   min-width: 150px;
   margin-top: 26px;
+  @media (max-width: 768px) {
+  }
+  @media (max-width: 512px) {
+  }
 `;

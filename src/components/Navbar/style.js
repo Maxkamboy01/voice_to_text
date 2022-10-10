@@ -18,16 +18,38 @@ export const NavbarStyle = styled.div`
   box-shadow: 0 0 10px grey;
   z-index: 1111;
   position: relative;
+  @media (max-width: 768px) {
+    width: 100vw;
+    height: 66px;
+    padding-left: 18px;
+  }
+  @media (max-width: 512px) {
+    width: 100vw;
+    height: 60px;
+    padding-left: 16px;
+  }
   .sidebar_btn {
     font-size: 32px;
     cursor: pointer;
+    @media (max-width: 768px) {
+      font-size: 30px;
+    }
+    @media (max-width: 512px) {
+      font-size: 28px;
+    }
   }
 
   .logo {
     font-size: 24px;
     font-weight: 400;
     letter-spacing: 0.1em;
-    font-family: 'Hubballi', cursive;
+    font-family: "Hubballi", cursive;
+    @media (max-width: 768px) {
+      letter-spacing: 0.08em;
+    }
+    @media (max-width: 512px) {
+      letter-spacing: 0.06em;
+    }
     .english {
       color: blue;
       font-weight: 400;
@@ -36,10 +58,22 @@ export const NavbarStyle = styled.div`
   .profile {
     margin-right: 35px;
     position: relative;
+    @media (max-width: 768px) {
+      margin-right: 33px;
+    }
+    @media (max-width: 512px) {
+      margin-right: 30px;
+    }
     .avatar_img {
       width: 45px;
       transition: all ease 300ms;
       cursor: pointer;
+      @media (max-width: 768px) {
+        width: 42px;
+      }
+      @media (max-width: 512px) {
+        width: 40px;
+      }
       &:hover {
         transform: scale(1.08);
       }
@@ -60,27 +94,50 @@ export const ProfileStyles = styled.div`
   transform: scale(${(props) => (props.profOpened ? 1 : 0)});
   transition: all ease 400ms;
   z-index: 123;
-  font-family: 'Hubballi', cursive;
+  font-family: "Hubballi", cursive;
+  @media (max-width: 768px) {
+    padding: 23px;
+    padding-bottom: 42px;
+  }
+  @media (max-width: 512px) {
+    padding: 25px;
+    padding-bottom: 45px;
+  }
+
   .menu_header {
     font-size: 20px;
     font-weight: 400;
     line-height: 8px;
     margin-bottom: 20px;
+    @media (max-width: 768px) {
+      font-size: 24px;
+    }
+    @media (max-width: 512px) {
+      font-size: 27px;
+    }
   }
   ul {
     li {
       margin-top: 9px;
       font-size: 20px;
+      @media (max-width: 768px) {
+        margin-top: 11px;
+        font-size: 23px;
+      }
+      @media (max-width: 512px) {
+        margin-top: 13px;
+        font-size: 25px;
+      }
       a {
         color: black;
       }
     }
   }
-  `;
-  
-  // SIDEBAR STYLES
-  
-  export const SidebarStyle = styled.ul`
+`;
+
+// SIDEBAR STYLES
+
+export const SidebarStyle = styled.ul`
   width: 356px;
   height: auto;
   float: left;
@@ -96,34 +153,47 @@ export const ProfileStyles = styled.div`
   padding-bottom: 40px;
   font-family: "Ibarra Real Nova", sans-serif;
   @media (max-width: 768px) {
-    left: ${(props) => (props.isOpen ? "0" : "-40vw")};
+    width: 288px;
+    top: 66px;
+    padding-bottom: 35px;
+    left: ${(props) => (props.isOpen ? "0" : "-50vw")};
+  }
+  @media (max-width: 512px) {
+    width: 220px;
+    top: 66px;
+    padding-bottom: 30px;
+    left: ${(props) => (props.isOpen ? "0" : "-50vw")};
   }
   .lesson_info {
+    font-size: 20px;
+    font-weight: 100;
+    text-transform: uppercase;
     line-height: 26px;
-    h2 {
-      font-size: 20px;
-      font-weight: 100;
-      text-transform: uppercase;
-      @media (max-width: 512px) {
-        font-size: 17px;
-      }
+    @media (max-width: 768px) {
+      line-height: 24px;
+      font-size: 18px;
     }
+    @media (max-width: 512px) {
+      line-height: 22px;
+      font-size: 16px;
+    }
+
     h3 {
-      font-size: 20px;
-      font-weight: 100;
-      @media (max-width: 512px) {
-        font-size: 17px;
-      }
+      text-transform: capitalize;
     }
   }
   li {
     font-size: 20px;
-    padding: 17px 140px 17px 20px;
+    padding: 17px 140px 17px 30px;
     border-bottom: 1.8px solid #e5bef3;
-    cursor:pointer;
+    cursor: pointer;
+    @media(max-width: 768px){
+      font-size: 18px;
+      padding: 15px 84px 15px 25px;
+    }
     @media (max-width: 512px) {
       font-size: 16px;
-      padding: 14px 44px 14px 14px;
+      padding: 14px 44px 14px 20px;
     }
   }
 `;
