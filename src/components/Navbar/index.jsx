@@ -6,7 +6,7 @@ import { NavbarStyle, SidebarStyle, ProfileStyles } from "./style";
 // IMG
 import { AiOutlineMenu } from "react-icons/ai";
 import Avatar from "../../assets/Frame 18.png";
-import Logo from "../../assets/logo.png"
+import Logo from "../../assets/logo.png";
 // IMG
 
 function Navbar() {
@@ -21,7 +21,6 @@ function Navbar() {
     console.log(sidebarOpen);
   };
 
-  
   const profileHandleclick = () => {
     if (profileOpen) {
       setprofileOpen(false);
@@ -78,19 +77,29 @@ function Navbar() {
           <h3>Theme: {"Hello!"}</h3>
         </li>
         <li>
-          {/* {id} */}1. {"Greating"}
+          <Link to="/next_test">
+            {/* {id} */}1. {"Greating"}
+          </Link>
         </li>
         <li>
-          {/* {id} */}2. {"Meeting"}
+          <Link to="/next_test">
+            {/* {id} */}2. {"Meeting"}
+          </Link>
         </li>
         <li>
-          {/* {id} */}3. {"Task1"}
+          <Link to="/next_test">
+            {/* {id} */}3. {"Task1"}
+          </Link>
         </li>
         <li>
-          {/* {id} */}4. {"Greating"}
+          <Link to="/next_test">
+            {/* {id} */}4. {"Greating"}
+          </Link>
         </li>
         <li>
-          {/* {id} */}5. {"Greating"}
+          <Link to="/next_test">
+            {/* {id} */}5. {"Greating"}
+          </Link>
         </li>
       </SidebarStyle>
     </>

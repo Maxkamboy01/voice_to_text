@@ -17,7 +17,8 @@ export const NavbarStyle = styled.div`
   );
   box-shadow: 0 0 10px grey;
   z-index: 1111;
-  position: relative;
+  position: sticky;
+  top:0;
   @media (max-width: 768px) {
     width: 100vw;
     height: 66px;
@@ -77,7 +78,6 @@ export const NavbarStyle = styled.div`
 // PROFILE MENU STYLES
 export const ProfileStyles = styled.div`
   width: auto;
-  padding: 20px;
   padding-bottom: 40px;
   background-color: #fff;
   border-radius: 4px;
@@ -89,19 +89,20 @@ export const ProfileStyles = styled.div`
   z-index: 123;
   font-family: "Hubballi", cursive;
   @media (max-width: 768px) {
-    padding: 23px;
     padding-bottom: 42px;
   }
   @media (max-width: 512px) {
-    padding: 25px;
     padding-bottom: 45px;
   }
 
   .menu_header {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 400;
     line-height: 8px;
     margin-bottom: 20px;
+    padding: 25px 22px;
+    padding-bottom: 0;
+
     @media (max-width: 768px) {
       font-size: 24px;
     }
@@ -112,17 +113,28 @@ export const ProfileStyles = styled.div`
   ul {
     li {
       margin-top: 9px;
-      font-size: 20px;
+      font-size: 22px;
+      padding: 5px 22px;
+      transition: all ease 300ms;
       @media (max-width: 768px) {
         margin-top: 11px;
         font-size: 23px;
+        padding: 6px 24px;
       }
       @media (max-width: 512px) {
         margin-top: 13px;
         font-size: 25px;
+        padding: 7px 26px;
+      }
+      &:hover {
+        background-color: #e3d6ff;
+        a {
+          color: #333;
+        }
       }
       a {
         color: black;
+        transition: all ease 300ms;
       }
     }
   }
@@ -137,7 +149,7 @@ export const SidebarStyle = styled.ul`
   background: #fff;
   position: absolute;
   top: 70px;
-  left: ${(props) => (props.isOpen ? "0" : "-30vw")};
+  left: ${(props) => (props.isOpen ? "0" : "-50vw")};
   font-weight: 100;
   border-radius: 4px;
   box-shadow: 0 0 10px grey;
@@ -145,11 +157,12 @@ export const SidebarStyle = styled.ul`
   z-index: 123;
   padding-bottom: 40px;
   font-family: "Ibarra Real Nova", sans-serif;
+
   @media (max-width: 768px) {
     width: 288px;
     top: 66px;
     padding-bottom: 35px;
-    left: ${(props) => (props.isOpen ? "0" : "-60vw")};
+    left: ${(props) => (props.isOpen ? "0" : "-70vw")};
   }
   @media (max-width: 512px) {
     width: 220px;
@@ -187,6 +200,12 @@ export const SidebarStyle = styled.ul`
     @media (max-width: 512px) {
       font-size: 16px;
       padding: 14px 44px 14px 20px;
+    }
+    &:hover{
+      background-color: #E5BEF3;
+      a{
+        color:white;
+      }
     }
   }
 `;
