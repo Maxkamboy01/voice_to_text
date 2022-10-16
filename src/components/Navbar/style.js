@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const NavbarStyle = styled.div`
-  width: auto;
+  width: 100vw;
   height: 70px;
   padding-left: 20px;
   display: flex;
@@ -147,7 +147,7 @@ export const SidebarStyle = styled.ul`
   height: auto;
   float: left;
   background: #fff;
-  position: absolute;
+  position: fixed;
   top: 70px;
   left: ${(props) => (props.isOpen ? "0" : "-50vw")};
   font-weight: 100;

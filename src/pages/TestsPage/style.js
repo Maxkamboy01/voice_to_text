@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const TestStyle = styled.div`
-  width: auto;
+  width: 100vw;
   min-height: 100vh;
   background-color: #e3d6ff;
   display: flex;
@@ -96,44 +96,44 @@ export const TestStyle = styled.div`
         font-family: "Ibarra Real Nova", serif;
         @media (max-width: 768px) {
           margin-top: -150px;
-          width: 180px;
-          height: 120px;
-          font-size: 22px;
+          width: 170px;
+          height: 115px;
+          font-size: 21px;
         }
         @media (max-width: 512px) {
           margin-top: -150px;
-          width: 160px;
+          width: 150px;
           height: 100px;
-          font-size: 20px;
+          font-size: 18px;
         }
       }
       .first_person {
         border-bottom-right-radius: 0;
         margin-right: 39px;
         @media (max-width: 768px) {
-          margin-right: -40px;
+          margin-right: -55px;
         }
         @media (max-width: 512px) {
-          margin-right: -70px;
+          margin-right: -86px;
         }
       }
       .dialogue_people {
         width: 396px;
         @media (max-width: 768px) {
-          width: 355px;
+          width: 345px;
         }
         @media (max-width: 512px) {
-          width: 320px;
+          width: 300px;
         }
       }
       .second_person {
         border-bottom-left-radius: 0;
         margin-left: 30px;
         @media (max-width: 768px) {
-          margin-left: -80px;
+          margin-left: -95px;
         }
         @media (max-width: 512px) {
-          margin-left: -130px;
+          margin-left: -145px;
         }
       }
     }

@@ -17,11 +17,12 @@ function MainPage() {
     <BrowserRouter>
       <Navbar  />
       <Routes>
-        <Route path="/" element={<TestsPage />} />
+        <Route path="/" />
         <Route path="/helppage" element={<Helppage />} />
         <Route path="/contentspage" element={<ContentsPage />} />
         <Route path="/authorpage" element={<AuthorPage />} />
         <Route path="/settingspage" element={<SettingsPage />} />
+        <Route path="/greating" element={<TestsPage />} />
       </Routes>
     </BrowserRouter>
   );

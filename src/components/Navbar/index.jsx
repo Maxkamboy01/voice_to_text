@@ -77,7 +77,7 @@ function Navbar() {
           <h3>Theme: {"Hello!"}</h3>
         </li>
         <li>
-          <Link to="/next_test">
+          <Link to="/greating">
             {/* {id} */}1. {"Greating"}
           </Link>
         </li>
