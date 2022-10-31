@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const TestStyle = styled.div`
-  width: 100vw;
+  width: ${(props) => (props.ismainOpen ? "77vw" : "100vw")};
+  margin-left: auto;
   min-height: 100vh;
   background-color: #e3d6ff;
   display: flex;

@@ -4,9 +4,9 @@ import SpeechRecorder from "../../components/speechrecorger/index";
 // IMAGES
 import Dialogue_img from "../../assets/testpage_guys.png";
 
-function TestsPage() {
+function TestsPage({isOpen,ismainOpen}) {
   return (
-    <TestStyle>
+    <TestStyle isOpen={isOpen} ismainOpen={ismainOpen}>
       <div className="container">
         <div className="test_info">
           <h1 className="theme">Hello!</h1>

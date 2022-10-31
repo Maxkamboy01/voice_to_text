@@ -1,24 +1,22 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { NavbarStyle, SidebarStyle, ProfileStyles } from "./style";
-// COMPONENTS
-// COMPONENTS
+import { NavbarStyle, ProfileStyles } from "./style";
 // IMG
 import { AiOutlineMenu } from "react-icons/ai";
 import Avatar from "../../assets/Frame 18.png";
 import Logo from "../../assets/logo.png";
 // IMG
 
-function Navbar() {
-  const [sidebarOpen, setsidebarOpen] = useState(false);
+function Navbar({ sidebarstate , sidebarsetstate }) {
   const [profileOpen, setprofileOpen] = useState(false);
+
   const sidebarHandleclick = () => {
-    if (sidebarOpen) {
-      setsidebarOpen(false);
+    if (sidebarstate) {
+      sidebarsetstate(false);
     } else {
-      setsidebarOpen(true);
+      sidebarsetstate(true);
     }
-    console.log(sidebarOpen);
+    console.log(sidebarstate);
   };
 
   const profileHandleclick = () => {
@@ -32,7 +30,7 @@ function Navbar() {
   return (
     <>
       <NavbarStyle className="navbar">
-        <AiOutlineMenu onClick={sidebarHandleclick} className="sidebar_btn" />
+        <AiOutlineMenu onClick={()=>sidebarHandleclick()} className="sidebar_btn" />
         <div className="logo">
           <img src={Logo} alt="" />
         </div>
@@ -59,49 +57,15 @@ function Navbar() {
                 <Link to="/helppage">support</Link>
               </li>
               <li>
-                <Link to="/">get pro</Link>
+                <Link to="/propage">get pro</Link>
               </li>
               <li>
-                <Link to="/">log out</Link>
+                <Link to="/logout">log out</Link>
               </li>
             </ul>
           </ProfileStyles>
         </div>
       </NavbarStyle>
-
-      {/* SIDEBAR */}
-
-      <SidebarStyle isOpen={sidebarOpen}>
-        <li className="lesson_info">
-          <h2> Lesson {"1"}</h2>
-          <h3>Theme: {"Hello!"}</h3>
-        </li>
-        <li>
-          <Link to="/greating">
-            {/* {id} */}1. {"Greating"}
-          </Link>
-        </li>
-        <li>
-          <Link to="/next_test">
-            {/* {id} */}2. {"Meeting"}
-          </Link>
-        </li>
-        <li>
-          <Link to="/next_test">
-            {/* {id} */}3. {"Task1"}
-          </Link>
-        </li>
-        <li>
-          <Link to="/next_test">
-            {/* {id} */}4. {"Greating"}
-          </Link>
-        </li>
-        <li>
-          <Link to="/next_test">
-            {/* {id} */}5. {"Greating"}
-          </Link>
-        </li>
-      </SidebarStyle>
     </>
   );
 }

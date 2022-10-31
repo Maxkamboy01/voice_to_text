@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import { AuthorpageStyle } from "./style";
 
-function AuthorPage() {
+function AuthorPage({ isOpen, ismainOpen }) {
   return (
-    <div>AuthorPage</div>
-  )
+    <AuthorpageStyle isOpen={isOpen} ismainOpen={ismainOpen}>
+      AuthorPage
+    </AuthorpageStyle>
+  );
 }
 
-export default AuthorPage
+export default AuthorPage;

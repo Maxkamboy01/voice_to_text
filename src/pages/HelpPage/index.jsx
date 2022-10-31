@@ -1,9 +1,10 @@
-import React from 'react'
+import React from "react";
+import { HelppageStyle } from "./style";
 
-function Helppage() {
+function Helppage({ isOpen, ismainOpen }) {
   return (
-    <div>Helppage</div>
-  )
+    <HelppageStyle isOpen={isOpen} ismainOpen={ismainOpen}>Helppage</HelppageStyle>
+  );
 }
 
-export default Helppage
+export default Helppage;

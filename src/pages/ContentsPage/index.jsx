@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import { ContentsPageStyle } from "./style";
 
-function ContentsPage() {
+function ContentsPage({ isOpen, ismainOpen }) {
   return (
-    <div>ContentsPage</div>
-  )
+    <ContentsPageStyle isOpen={isOpen} ismainOpen={ismainOpen}>
+      ContentsPage
+    </ContentsPageStyle>
+  );
 }
 
-export default ContentsPage
+export default ContentsPage;
