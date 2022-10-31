@@ -10,10 +10,9 @@ function App() {
 
   const [login, setLogin] = useState(false);
 
-  const logging = (e) => {
-    const { userInfo } = this.state;
-
+  const Logging = (e) => {
     e.preventDefault();
+
     const name = e.target.name.value;
     const password = e.target.password.value;
     console.log(e);
@@ -35,7 +34,7 @@ function App() {
       {login ? (
         <MainPage />
       ) : (
-        <from onSubmit={logging}>
+        <form onSubmit={Logging}>
           <h2>hello mister lazy boss</h2>
           <input type="text" name="name" placeholder="Enter your name" />
           <input
@@ -43,8 +42,8 @@ function App() {
             name="password"
             placeholder="Enter your password"
           />
-          <button>come</button>
-        </from>
+          <button type="submit">come</button>
+        </form>
       )}
       {/* <Login /> */}
     </div>
