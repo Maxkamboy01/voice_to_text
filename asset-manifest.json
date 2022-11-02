@@ -1,13 +1,16 @@
 {
   "files": {
-    "main.css": "/voice_to_text/static/css/main.c29a99a3.css",
-    "main.js": "/voice_to_text/static/js/main.db3bfc09.js",
+    "main.css": "/voice_to_text/static/css/main.0f49ba64.css",
+    "main.js": "/voice_to_text/static/js/main.82432e97.js",
     "static/js/787.cae70fee.chunk.js": "/voice_to_text/static/js/787.cae70fee.chunk.js",
     "static/media/testpage_guys.png": "/voice_to_text/static/media/testpage_guys.333130d43c7f5ab11ee6.png",
+    "static/media/matchingImg.png": "/voice_to_text/static/media/matchingImg.8f4e579ced981f3255fe.png",
     "static/media/twitter.png": "/voice_to_text/static/media/twitter.da5d9bdae849285d229f.png",
     "static/media/google_icon.png": "/voice_to_text/static/media/google_icon.cb97e7f0ca5d739025b2.png",
+    "static/media/numberTestImg.png": "/voice_to_text/static/media/numberTestImg.218298666797c08755be.png",
     "static/media/cancel.png": "/voice_to_text/static/media/cancel.1583723861a66fb05605.png",
     "static/media/checked.png": "/voice_to_text/static/media/checked.6f298cca57a5a8b36055.png",
+    "static/media/avatarImg.png": "/voice_to_text/static/media/avatarImg.9d518d7a990154e30aec.png",
     "static/media/facebook_icon.png": "/voice_to_text/static/media/facebook_icon.4f037d961598aff2a0a4.png",
     "index.html": "/voice_to_text/index.html",
     "static/media/authors_icon.svg": "/voice_to_text/static/media/authors_icon.4ec3ddd5b70bbea330aea17020ccf269.svg",
@@ -23,12 +26,12 @@
     "static/media/rightarrow_icon.svg": "/voice_to_text/static/media/rightarrow_icon.b27c783b409fb1613644166bc694df53.svg",
     "static/media/titleopening.svg": "/voice_to_text/static/media/titleopening.2e0eb198ce599e3a4ee5d4df46fd6bd1.svg",
     "static/media/titleclosing.svg": "/voice_to_text/static/media/titleclosing.ac2b75521e0546594ea1131cd0b2f1f6.svg",
-    "main.c29a99a3.css.map": "/voice_to_text/static/css/main.c29a99a3.css.map",
-    "main.db3bfc09.js.map": "/voice_to_text/static/js/main.db3bfc09.js.map",
+    "main.0f49ba64.css.map": "/voice_to_text/static/css/main.0f49ba64.css.map",
+    "main.82432e97.js.map": "/voice_to_text/static/js/main.82432e97.js.map",
     "787.cae70fee.chunk.js.map": "/voice_to_text/static/js/787.cae70fee.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c29a99a3.css",
-    "static/js/main.db3bfc09.js"
+    "static/css/main.0f49ba64.css",
+    "static/js/main.82432e97.js"
   ]
 }
