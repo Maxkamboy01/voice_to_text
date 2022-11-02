@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useSpeechSynthesis } from "react-speech-kit";
-import { Testcontainer, ResultContainer, PopUpBox } from "./style";
+import { Testcontainer, ResultContainer, PopUpBox, VolumeRange } from "./style";
 import { Link } from "react-router-dom";
 // ICONS
 import Correct from "../../assets/checked.png";
@@ -13,13 +13,11 @@ import SpeechRecognition, {
   useSpeechRecognition,
 } from "react-speech-recognition";
 
-function Speechkit() {
+function Speechkit(props) {
   const [mistakes, setMistakes] = useState(true);
   const [volumeOpened, setvolumeOpened] = useState(false);
   const { speak, cancel, voices } = useSpeechSynthesis({ lang: "en" });
-  const [textvalue, settextvalue] = useState(
-    "hello! my name is Tom...   hello! my name is Liza"
-  );
+  const [textvalue, settextvalue] = useState(props.testText);
   const [resetvalue, setresetvalue] = useState(false);
   const {
     transcript,
@@ -51,7 +49,7 @@ function Speechkit() {
     SpeechRecognition.stopListening();
     setresetvalue(true);
     //
-    if (transcript.includes("hello my name is ")) {
+    if (transcript.includes(textvalue)) {
       settingcorrect();
       console.log(transcript);
     } else {
@@ -60,12 +58,14 @@ function Speechkit() {
     }
   };
 
-  const redoTest = () => {
-    setresetvalue(false);
+  const redoTest = (e) => {
+    e.preventDefault();
+    setresetvalue(true);
     transcript = null;
   };
 
-  const nextTest = () => {
+  const nextTest = (e) => {
+    e.preventDefault();
     setresetvalue(false);
   };
 
@@ -78,7 +78,12 @@ function Speechkit() {
 
   // volume functions
   const rangeOpened = () => {
-    setvolumeOpened(!volumeOpened);
+    if (volumeOpened) {
+      setvolumeOpened(false);
+    } else {
+      setvolumeOpened(true);
+    }
+    // setvolumeOpened(!volumeOpened);
     console.log(volumeOpened);
   };
 
@@ -142,7 +147,7 @@ function Speechkit() {
               </h2>
               <button className="nextreset_btn">
                 {mistakes ? (
-                  <Link to="/" onClick={() => redoTest()} className="link_btn">
+                  <Link onClick={() => redoTest()} className="link_btn">
                     Boshidan
                     <svg
                       stroke="currentColor"
@@ -193,13 +198,6 @@ function Speechkit() {
         )}
          */}
 
-        {/* {listening ? (
-            <>
-              <div className="animation" />
-            </>
-          ) : (
-            ""
-          )} */}
         <div className="text_to_speech_box">
           <AiFillPlayCircle
             // onClick={listening ? () => window.speechSynthesis.cancel()
@@ -210,10 +208,7 @@ function Speechkit() {
           />
           <input type="range" name="slider" className="audio_slider" />
           <div className="volume_settings">
-            <div
-              className="volume_box"
-              onClick={() => rangeOpened()}
-            >
+            <div className="volume_box">
               <svg
                 className="volume_btn"
                 stroke="currentColor"
@@ -221,25 +216,27 @@ function Speechkit() {
                 strokeWidth="0"
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
+                onClick={rangeOpened}
               >
                 <path d="M16 21c3.527-1.547 5.999-4.909 5.999-9S19.527 4.547 16 3v2c2.387 1.386 3.999 4.047 3.999 7S18.387 17.614 16 19v2z"></path>
                 <path d="M16 7v10c1.225-1.1 2-3.229 2-5s-.775-3.9-2-5zM4 17h2.697l5.748 3.832a1.004 1.004 0 0 0 1.027.05A1 1 0 0 0 14 20V4a1 1 0 0 0-1.554-.832L6.697 7H4c-1.103 0-2 .897-2 2v6c0 1.103.897 2 2 2zm0-8h3c.033 0 .061-.016.093-.019a1.027 1.027 0 0 0 .38-.116c.026-.015.057-.017.082-.033L12 5.868v12.264l-4.445-2.964c-.025-.017-.056-.02-.082-.033a.986.986 0 0 0-.382-.116C7.059 15.016 7.032 15 7 15H4V9z"></path>
               </svg>
             </div>
-            <input
-              type="range"
-              name="volume_range"
-              className="volume_range"
-              id="volume_range"
-              isOpened={volumeOpened}
-            />
+            <VolumeRange className="volume_range_box" isVolumeOpened={volumeOpened}>
+              <input
+                type="range"
+                name="volume_range"
+                className="volume_range"
+                id="volume_range"
+              />
+            </VolumeRange>
           </div>
         </div>
       </Testcontainer>
       <ResultContainer>
-        <h2 className="header">Endi sizning navbatingiz</h2>
+        <h2 className="header">{props.tasktexts}</h2>
         <marquee className="marquee">{transcript}</marquee>
-        <h4 className="subheader">Tepadagi tugmani bosing va gapiring</h4>
+        <h4 className="subheader">{props.taskInstructions}</h4>
       </ResultContainer>
     </div>
   );

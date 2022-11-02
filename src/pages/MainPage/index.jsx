@@ -24,18 +24,18 @@ import { ReactComponent as SettingsIcon } from "../../assets/settings.svg";
 import { ReactComponent as LogoutIcon } from "../../assets/logout_icon.svg";
 // ICONS
 
-function MainPage() {
+function MainPage(props) {
   const [mainsidebarOpen, setmainsidebarOpen] = useState(false);
   const [sidebarOpen, setsidebarOpen] = useState(false);
 
   return (
     <MainPagestyle>
       <BrowserRouter>
-        <Navbar sidebarstate={mainsidebarOpen} sidebarsetstate={setmainsidebarOpen} />
+        <Navbar  setLogin={props.setLogin} sidebarstate={mainsidebarOpen} sidebarsetstate={setmainsidebarOpen} />
 
-        <Mainsidebarstyle ismainOpen={mainsidebarOpen}>
+        <Mainsidebarstyle onMouseLeave={()=>setmainsidebarOpen(false)} ismainOpen={mainsidebarOpen}>
           <li>
-            <Link to="/">
+            <Link to="">
               <HomeIcon />
               <h2>Bosh sahifa</h2>
             </Link>
@@ -66,9 +66,9 @@ function MainPage() {
               </Link>
             </li>
             <li>
-              <Link to="/logout">
+              <Link onClick={()=>props.setLogin(false)}>
                 <LogoutIcon />
-                <h2>Chiqish</h2>
+                <h2 >Chiqish</h2>
               </Link>
             </li>
           </ul>

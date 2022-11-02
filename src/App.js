@@ -8,7 +8,7 @@ function App() {
     password: "parol",
   };
 
-  const [login, setLogin] = useState(false);
+  const [login, setLogin] = useState(true);
 
   const Logging = (e) => {
     e.preventDefault();
@@ -32,7 +32,7 @@ function App() {
     <div className="App">
       {/* <MainPage /> */}
       {login ? (
-        <MainPage />
+        <MainPage setLogin={setLogin}/>
       ) : (
         <form onSubmit={Logging}>
           <h2>hello mister lazy boss</h2>

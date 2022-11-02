@@ -7,7 +7,7 @@ import Avatar from "../../assets/Frame 18.png";
 import Logo from "../../assets/logo.png";
 // IMG
 
-function Navbar({ sidebarstate , sidebarsetstate }) {
+function Navbar({ sidebarstate , sidebarsetstate,setLogin }) {
   const [profileOpen, setprofileOpen] = useState(false);
 
   const sidebarHandleclick = () => {
@@ -29,7 +29,7 @@ function Navbar({ sidebarstate , sidebarsetstate }) {
   };
   return (
     <>
-      <NavbarStyle className="navbar">
+      <NavbarStyle className="navbar" >
         <AiOutlineMenu onClick={()=>sidebarHandleclick()} className="sidebar_btn" />
         <div className="logo">
           <img src={Logo} alt="" />
@@ -41,7 +41,7 @@ function Navbar({ sidebarstate , sidebarsetstate }) {
             src={Avatar}
             alt=""
           />
-          <ProfileStyles className="profile_menu" profOpened={profileOpen}>
+          <ProfileStyles onMouseLeave={()=>setprofileOpen(false)}   className="profile_menu" profOpened={profileOpen}>
             <h2 className="menu_header">
               Profile <br />
               __________
@@ -60,7 +60,7 @@ function Navbar({ sidebarstate , sidebarsetstate }) {
                 <Link to="/propage">get pro</Link>
               </li>
               <li>
-                <Link to="/logout">log out</Link>
+                <Link onClick={()=>setLogin(false)}>log out</Link>
               </li>
             </ul>
           </ProfileStyles>

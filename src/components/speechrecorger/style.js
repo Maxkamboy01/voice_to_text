@@ -181,6 +181,7 @@ export const Testcontainer = styled.div`
           width: 30px;
           height: 30px;
           color: white;
+          cursor: pointer;
           @media (max-width: 768px) {
             width: 35px;
           }
@@ -189,47 +190,54 @@ export const Testcontainer = styled.div`
           }
         }
       }
-      .volume_range {
-        width: 60px;
-        height: 6px;
-        -webkit-appearance: none;
-        appearance: none;
-        display: ${(props) => (props.isOpened ? "flex" : "none")};
-        background-color: #444;
-        border-radius: 4px;
-        outline: none;
-        opacity: 0.7;
-        -webkit-transition: 0.2s;
-        transition: opacity 0.2s;
-        margin-left: 8px;
-        @media (max-width: 768px) {
-          width: 65px;
-        }
-        @media (max-width: 512px) {
-          width: 70px;
-        }
-
-        &:hover {
-          opacity: 1; /* Fully shown on mouse-over */
-        }
-        &::-webkit-slider-thumb {
-          -webkit-appearance: none; /* Override default look */
-          appearance: none;
-          width: 12px; /* Set a specific slider handle width */
-          height: 12px; /* Slider handle height */
-          background-color: #000; /* Green background */
-          border-radius: 50%;
-          cursor: pointer; /* Cursor on hover */
-        }
-        &::-webkit-slider-thumb {
-          -webkit-appearance: none; /* Override default look */
-          appearance: none;
-          width: 12px; /* Set a specific slider handle width */
-          height: 12px; /* Slider handle height */
-          background: #000; /* Green background */
-          cursor: pointer; /* Cursor on hover */
-        }
+      .volume_range_box {
       }
+    }
+  }
+`;
+
+export const VolumeRange = styled.div`
+  display: ${(props) => (props.isVolumeOpened ? "block" : "none")};
+  .volume_range {
+    width: 60px;
+    height: 6px;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #444;
+    border-radius: 4px;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
+    margin-left: 8px;
+    // margin-bottom: 30px;
+    // transform:rotate(90deg);
+    @media (max-width: 768px) {
+      width: 65px;
+    }
+    @media (max-width: 512px) {
+      width: 70px;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none; /* Override default look */
+      appearance: none;
+      width: 12px; /* Set a specific slider handle width */
+      height: 12px; /* Slider handle height */
+      background-color: #000; /* Green background */
+      border-radius: 50%;
+      cursor: pointer; /* Cursor on hover */
+    }
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none; /* Override default look */
+      appearance: none;
+      width: 12px; /* Set a specific slider handle width */
+      height: 12px; /* Slider handle height */
+      background: #000; /* Green background */
+      cursor: pointer; /* Cursor on hover */
     }
   }
 `;
