@@ -63,19 +63,23 @@ export const SettingsPageStyle = styled.div`
       font-family: "Ibarra Real Nova", sans-serif;
       @media (max-width: 768px) {
         padding: 10px 35px;
+        flex-wrap: wrap;
       }
       @media (max-width: 512px) {
         padding: 10px 30px;
+        flex-wrap: wrap;
       }
       .account_settings_menu {
         width: 30%;
         @media (max-width: 768px) {
-          width: 360px;
+          width: 100%;
           margin: auto;
+          margin-bottom: 30px;
         }
         @media (max-width: 512px) {
-          width: 300px;
+          width: 100%;
           margin: auto;
+          margin-bottom: 30px;
         }
         .account_settings_menu_title {
           font-size: 28px;
@@ -83,9 +87,14 @@ export const SettingsPageStyle = styled.div`
           letter-spacing: 0.15em;
           margin-bottom: 40px;
           @media (max-width: 768px) {
-            
+            font-size: 29px;
+            margin-bottom: 30px;
+            text-align: center;
           }
           @media (max-width: 512px) {
+            font-size: 30px;
+            margin-bottom: 30px;
+            text-align: center;
           }
         }
         li {
@@ -97,6 +106,18 @@ export const SettingsPageStyle = styled.div`
           position: relative;
           transition: all ease 200ms;
           cursor: pointer;
+          @media (max-width: 768px) {
+            font-size: 27px;
+            font-weight: 400;
+            padding: 6px 0 6px 20px;
+            text-align: right;
+          }
+          @media (max-width: 512px) {
+            font-size: 26px;
+            font-weight: 400;
+            padding: 6px 0 6px 20px;
+            text-align: right;
+          }
           &::before {
             transition: all ease 300ms;
           }
@@ -120,6 +141,16 @@ export const SettingsPageStyle = styled.div`
     .routerpage {
       width: 65%;
       background: #f1ebff;
+      @media (max-width: 768px) {
+        width: 100%;
+        margin: auto;
+        margin-bottom: 30px;
+      }
+      @media (max-width: 512px) {
+        width: 100%;
+        margin: auto;
+        margin-bottom: 30px;
+      }
     }
   }
 `;

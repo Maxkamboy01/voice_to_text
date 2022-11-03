@@ -5,10 +5,10 @@ export const HomePageStyle = styled.div`
   height: auto;
   margin-left: auto;
   @media (max-width: 768px) {
-    width: ${(props) => (props.ismainOpen ? "68vw" : "100vw")};
+    width: ${(props) => (props.ismainOpen ? "288px" : "100vw")};
   }
   @media (max-width: 512px) {
-    width: ${(props) => (props.ismainOpen ? "60vw" : "100vw")};
+    width: ${(props) => (props.ismainOpen ? "220px" : "100vw")};
   }
   .container {
     width: 100%;
@@ -221,12 +221,12 @@ export const CourseLessons = styled.ul`
         @media (max-width: 768px) {
           border-radius: 13px;
           font-size: 15px;
-          border:none;
+          border: none;
         }
         @media (max-width: 512px) {
           border-radius: 12px;
           font-size: 16px;
-          border:none;
+          border: none;
         }
         &:hover {
           border-color: #dc45f3;

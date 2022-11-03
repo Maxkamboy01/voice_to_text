@@ -90,15 +90,15 @@ export const Mainsidebarstyle = styled.ul`
   font-family: "Ibarra Real Nova", sans-serif;
   @media (max-width: 768px) {
     width: 288px;
-    height: calc(100vh-66px);
+    height: 96vh;
     top: 66px;
     padding-bottom: 18px;
     left: ${(props) => (props.isOpen ? "0" : "-70vw")};
   }
   @media (max-width: 512px) {
     width: 220px;
-    height: calc(100vh-60px);
-    top: 66px;
+    height: 93vh;
+    top: 60px;
     padding-bottom: 16px;
     left: ${(props) => (props.isOpen ? "0" : "-70vw")};
   }

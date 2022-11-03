@@ -12,20 +12,19 @@ function SettingsPage({ isOpen, ismainOpen }) {
 
   let page = <Password />;
   const settingpage = () => {
-  if (routerpage === "personal information") {
-    return (page = <PersonalInfo />);
-  } else if (routerpage === "password") {
-    return (page = <Password />);
-  } else if (routerpage === "linked accounts") {
-    return (page = <Linkedaccounts />);
-  } else if (routerpage === "setting languages") {
-    return (page = <SettingLang />);
-  } else {
-    return (page = <PersonalInfo />);
-  }
-  }
-  ;
-  settingpage()
+    if (routerpage === "personal information") {
+      return (page = <PersonalInfo />);
+    } else if (routerpage === "password") {
+      return (page = <Password />);
+    } else if (routerpage === "linked accounts") {
+      return (page = <Linkedaccounts />);
+    } else if (routerpage === "setting languages") {
+      return (page = <SettingLang />);
+    } else {
+      return (page = <PersonalInfo />);
+    }
+  };
+  settingpage();
 
   return (
     <SettingsPageStyle isOpen={isOpen} ismainOpen={ismainOpen}>

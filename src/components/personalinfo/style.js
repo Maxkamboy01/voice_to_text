@@ -9,6 +9,14 @@ export const PersonalInfoStyle = styled.div`
     font-weight: 300;
     color: #000;
     margin-bottom: 10px;
+    @media (max-width: 768px) {
+      font-size: 32px;
+      text-align: center;
+    }
+    @media (max-width: 512px) {
+      font-size: 30px;
+      text-align: center;
+    }
   }
   label {
     font-family: "Hind Vadodara", sans-serif;
@@ -17,22 +25,51 @@ export const PersonalInfoStyle = styled.div`
     font-weight: 400;
     margin-top: 10px;
     color: #5b5b5b;
+    @media (max-width: 768px) {
+      font-size: 22px;
+      margin: auto;
+    }
+    @media (max-width: 512px) {
+      font-size: 20px;
+      margin: auto;
+    }
   }
   input {
     text-indent: 10px;
     font-size: 20px;
-    padding: 12px 0 12px 0;
+    padding: 12px 0;
     border-radius: 6px;
     color: #868686;
     border: 1px solid #868686;
     letter-spacing: 0.1em;
+    @media (max-width: 768px) {
+      font-size: 21px;
+      padding: 11px 0;
+      text-indent: 8px;
+      letter-spacing: 0.7px;
+    }
+    @media (max-width: 512px) {
+      font-size: 22px;
+      padding: 19px 0;
+      letter-spacing: 0.5px;
+    }
   }
   .details_box {
     width: 100%;
+    @media (max-width: 768px) {
+    }
+    @media (max-width: 512px) {
+    }
     .foto_name_box {
       display: flex;
       justify-content: space-evenly;
       align-items: center;
+      @media (max-width: 768px) {
+        flex-wrap: wrap;
+      }
+      @media (max-width: 512px) {
+        flex-wrap: wrap;
+      }
       .image_upload_box {
         width: 200px;
         height: 200px;
@@ -43,6 +80,12 @@ export const PersonalInfoStyle = styled.div`
         align-items: center;
         border-radius: 50%;
         cursor: pointer;
+        @media (max-width: 768px) {
+        }
+        @media (max-width: 512px) {
+          width: 220px;
+          height: 220px;
+        }
         svg {
           transform: scale(1.5);
         }
@@ -53,6 +96,12 @@ export const PersonalInfoStyle = styled.div`
         .input {
           width: 333px;
           text-transform: capitalize;
+          @media (max-width: 768px) {
+            width: 456px;
+          }
+          @media (max-width: 512px) {
+            width: 356px;
+          }
         }
       }
     }
@@ -62,20 +111,63 @@ export const PersonalInfoStyle = styled.div`
       flex-direction: column;
       width: 85%;
       margin: auto;
-      .email {
+      @media (max-width: 768px) {
         width: 100%;
+      }
+      @media (max-width: 512px) {
+        width: 100%;
+      }
+      label {
+        @media (max-width: 768px) {
+          margin: auto;
+        }
+        @media (max-width: 512px) {
+          margin: auto;
+        }
+      }
+      .email {
+        width: 96%;
+        margin: auto;
+        @media (max-width: 768px) {
+          font-size: 21px;
+          padding: 11px 0;
+          text-indent: 8px;
+          letter-spacing: 0.7px;
+        }
+        @media (max-width: 512px) {
+          font-size: 22px;
+          padding: 19px 0;
+          letter-spacing: 0.5px;
+        }
       }
       .phonenumber {
         display: flex;
-        width: 100%;
+        justify-content: space-between;
+        width: 96%;
+        margin: auto;
+        @media (max-width: 768px) {
+          margin: auto;
+          justify-content: space-evenly;
+          flex-wrap: wrap;
+        }
+        @media (max-width: 512px) {
+          margin: auto;
+          flex-wrap: wrap;
+        }
         .phone_input {
-          width: 100%;
-
+          width: 76%;
           display: flex;
-          justify-content: space-between;
           flex-direction: column;
+          @media (max-width: 768px) {
+            width: 100%;
+          }
+          @media (max-width: 512px) {
+            margin: auto;
+            width: 100%;
+          }
           input {
-            width: 77%;
+            width: 100%;
+            margin-right: auto;
           }
         }
         .sendnumber {
@@ -98,6 +190,14 @@ export const PersonalInfoStyle = styled.div`
           border-radius: 11px;
           border: 3px solid transparent;
           transition: all ease 3ooms;
+          @media (max-width: 768px) {
+            margin: auto;
+            margin-top: 12px;
+          }
+          @media (max-width: 512px) {
+            margin: auto;
+            margin-top: 12px;
+          }
           &:hover {
             background: transparent;
             border-color: #c242ff;
@@ -112,6 +212,21 @@ export const PersonalInfoStyle = styled.div`
       float: right;
       display: flex;
       padding-right: 70px;
+
+      @media (max-width: 768px) {
+        margin-top: 40px;
+        margin-bottom: 27px;
+        padding: auto;
+        float: center;
+      }
+
+      @media (max-width: 512px) {
+        margin-top: 35px;
+        margin-bottom: 25px;
+        padding: auto;
+        float: center;
+      }
+
       button {
         width: auto;
         padding: 15px 30px;
@@ -126,6 +241,10 @@ export const PersonalInfoStyle = styled.div`
         border-color: #c242ff;
         color: #c242ff;
         margin-right: 20px;
+        @media (max-width: 768px) {
+          margin: auto;
+          margin-right: 10px;
+        }
         &:hover {
           background: linear-gradient(
             104.82deg,
@@ -144,6 +263,7 @@ export const PersonalInfoStyle = styled.div`
           color: #c242ff;
         }
       }
+      
     }
   }
 `;
