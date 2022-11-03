@@ -7,12 +7,15 @@ import { CourseLessons, HomePageStyle } from "./style";
 import { Link } from "react-router-dom";
 
 function HomePage({ isOpen, ismainOpen }) {
-  const [titleOpened, settitleOpened] = useState(true);
-
-  const titleHendler = () => {
-    settitleOpened(!titleOpened);
-    console.log(titleOpened);
-  };
+  const [titleOpened, settitleOpened] = useState({
+    beginner: true,
+    elementary: false,
+    preintermidiate: false,
+    intermidiate: false,
+    upperintermidiate: false,
+    advanced: false,
+    skills: false,
+  });
 
   return (
     <HomePageStyle
@@ -26,13 +29,13 @@ function HomePage({ isOpen, ismainOpen }) {
           <h2 className="opened_text">Ochiq qismlar:</h2>
           <div className="opened_courses">
             <div className="courses">
-              <div className="courses_title" onClick={() => titleHendler()}>
+              <div className="courses_title" onClick={() => settitleOpened({beginner: !titleOpened.beginner})}>
                 <h2 className="course_title">Beginner</h2>
                 <div className="titleOpenIcon">
                   {titleOpened ? <TitleClosing /> : <TitleOpening />}
                 </div>
               </div>
-              <CourseLessons isOpen={titleOpened} className="course_lessons">
+              <CourseLessons isOpen={titleOpened.beginner} className="course_lessons">
                 <li>
                   <Link to="/testspage">
                     <h2 className="lesson_theme">1. Theme: {"Hello!"}</h2>
@@ -79,37 +82,46 @@ function HomePage({ isOpen, ismainOpen }) {
             </div>
           </div>
         </div>
-        
-
 
         <div className="opened_parts closed_parts">
           <h2 className="opened_text">Yopiq qismlar:</h2>
           <div className="opened_courses">
             <div className="courses">
-              <div className="courses_title" onClick={() => titleHendler()}>
+              <div
+                className="courses_title"
+                onClick={() => settitleOpened({ elementary: !titleOpened.elementary })}
+              >
                 <h2 className="course_title">Elementary</h2>
                 <div className="titleOpenIcon">
                   {/* {titleOpened ? <TitleClosing /> : <TitleOpening />} */}
                   <LockedLesson />
                 </div>
               </div>
-              <CourseLessons isOpen={titleOpened} className="course_lessons">
+              <CourseLessons isOpen={titleOpened.elementary} className="course_lessons">
                 <li>
                   <Link to="/testspage">
                     <h2 className="lesson_theme">1. Theme: {"Hello!"}</h2>
-                    <button className="continue_btn"><LockedLesson/></button>
+                    <button className="continue_btn">
+                      <LockedLesson />
+                    </button>
                   </Link>
                 </li>
                 <li>
                   <Link to="testspage">
                     <h2 className="lesson_theme">2. Theme: {"Lorem!"}</h2>
-                    <button className="continue_btn"> <LockedLesson /></button>
+                    <button className="continue_btn">
+                      {" "}
+                      <LockedLesson />
+                    </button>
                   </Link>
                 </li>
                 <li>
                   <Link to="testspage">
                     <h2 className="lesson_theme">3. Theme: {"Lorem!"}</h2>
-                    <button className="continue_btn"> <LockedLesson /></button>
+                    <button className="continue_btn">
+                      {" "}
+                      <LockedLesson />
+                    </button>
                   </Link>
                 </li>
                 <li>
@@ -139,31 +151,38 @@ function HomePage({ isOpen, ismainOpen }) {
               </CourseLessons>
             </div>
             <div className="courses">
-              <div className="courses_title" onClick={() => titleHendler()}>
+              <div className="courses_title" onClick={() => settitleOpened({preintermidiate:!titleOpened.preintermidiate,})}>
                 <h2 className="course_title">Pre-Intermidiate</h2>
                 <div className="titleOpenIcon">
                   {/* {titleOpened ? <TitleClosing /> : <TitleOpening />} */}
                   <LockedLesson />
-
                 </div>
               </div>
-              <CourseLessons isOpen={titleOpened} className="course_lessons">
+              <CourseLessons isOpen={titleOpened.preintermidiate} className="course_lessons">
                 <li>
                   <Link to="/testspage">
                     <h2 className="lesson_theme">1. Theme: {"Hello!"}</h2>
-                    <button className="continue_btn"><LockedLesson/></button>
+                    <button className="continue_btn">
+                      <LockedLesson />
+                    </button>
                   </Link>
                 </li>
                 <li>
                   <Link to="testspage">
                     <h2 className="lesson_theme">2. Theme: {"Lorem!"}</h2>
-                    <button className="continue_btn"> <LockedLesson /></button>
+                    <button className="continue_btn">
+                      {" "}
+                      <LockedLesson />
+                    </button>
                   </Link>
                 </li>
                 <li>
                   <Link to="testspage">
                     <h2 className="lesson_theme">3. Theme: {"Lorem!"}</h2>
-                    <button className="continue_btn"> <LockedLesson /></button>
+                    <button className="continue_btn">
+                      {" "}
+                      <LockedLesson />
+                    </button>
                   </Link>
                 </li>
                 <li>
@@ -193,31 +212,38 @@ function HomePage({ isOpen, ismainOpen }) {
               </CourseLessons>
             </div>
             <div className="courses">
-              <div className="courses_title" onClick={() => titleHendler()}>
+              <div className="courses_title" onClick={() => settitleOpened({intermidiate:!titleOpened.intermidiate,})}>
                 <h2 className="course_title">Intermediate</h2>
                 <div className="titleOpenIcon">
                   {/* {titleOpened ? <TitleClosing /> : <TitleOpening />} */}
                   <LockedLesson />
-
                 </div>
               </div>
-              <CourseLessons isOpen={titleOpened} className="course_lessons">
+              <CourseLessons isOpen={titleOpened.intermidiate} className="course_lessons">
                 <li>
                   <Link to="/testspage">
                     <h2 className="lesson_theme">1. Theme: {"Hello!"}</h2>
-                    <button className="continue_btn"><LockedLesson/></button>
+                    <button className="continue_btn">
+                      <LockedLesson />
+                    </button>
                   </Link>
                 </li>
                 <li>
                   <Link to="testspage">
                     <h2 className="lesson_theme">2. Theme: {"Lorem!"}</h2>
-                    <button className="continue_btn"> <LockedLesson /></button>
+                    <button className="continue_btn">
+                      {" "}
+                      <LockedLesson />
+                    </button>
                   </Link>
                 </li>
                 <li>
                   <Link to="testspage">
                     <h2 className="lesson_theme">3. Theme: {"Lorem!"}</h2>
-                    <button className="continue_btn"> <LockedLesson /></button>
+                    <button className="continue_btn">
+                      {" "}
+                      <LockedLesson />
+                    </button>
                   </Link>
                 </li>
                 <li>
@@ -247,31 +273,38 @@ function HomePage({ isOpen, ismainOpen }) {
               </CourseLessons>
             </div>
             <div className="courses">
-              <div className="courses_title" onClick={() => titleHendler()}>
-                <h2 className="course_title">Apper-Intermediate</h2>
+              <div className="courses_title" onClick={() => settitleOpened({upperintermidiate:!titleOpened.upperintermidiate,})}>
+                <h2 className="course_title">Upper-Intermediate</h2>
                 <div className="titleOpenIcon">
                   {/* {titleOpened ? <TitleClosing /> : <TitleOpening />} */}
                   <LockedLesson />
-
                 </div>
               </div>
-              <CourseLessons isOpen={titleOpened} className="course_lessons">
+              <CourseLessons isOpen={titleOpened.upperintermidiate} className="course_lessons">
                 <li>
                   <Link to="/testspage">
                     <h2 className="lesson_theme">1. Theme: {"Hello!"}</h2>
-                    <button className="continue_btn"><LockedLesson/></button>
+                    <button className="continue_btn">
+                      <LockedLesson />
+                    </button>
                   </Link>
                 </li>
                 <li>
                   <Link to="testspage">
                     <h2 className="lesson_theme">2. Theme: {"Lorem!"}</h2>
-                    <button className="continue_btn"> <LockedLesson /></button>
+                    <button className="continue_btn">
+                      {" "}
+                      <LockedLesson />
+                    </button>
                   </Link>
                 </li>
                 <li>
                   <Link to="testspage">
                     <h2 className="lesson_theme">3. Theme: {"Lorem!"}</h2>
-                    <button className="continue_btn"> <LockedLesson /></button>
+                    <button className="continue_btn">
+                      {" "}
+                      <LockedLesson />
+                    </button>
                   </Link>
                 </li>
                 <li>
@@ -301,31 +334,38 @@ function HomePage({ isOpen, ismainOpen }) {
               </CourseLessons>
             </div>
             <div className="courses">
-              <div className="courses_title" onClick={() => titleHendler()}>
+              <div className="courses_title" onClick={() => settitleOpened({advanced: !titleOpened.advanced,})}>
                 <h2 className="course_title">Advanced</h2>
                 <div className="titleOpenIcon">
                   {/* {titleOpened ? <TitleClosing /> : <TitleOpening />} */}
                   <LockedLesson />
-
                 </div>
               </div>
-              <CourseLessons isOpen={titleOpened} className="course_lessons">
+              <CourseLessons isOpen={titleOpened.advanced} className="course_lessons">
                 <li>
                   <Link to="/testspage">
                     <h2 className="lesson_theme">1. Theme: {"Hello!"}</h2>
-                    <button className="continue_btn"><LockedLesson/></button>
+                    <button className="continue_btn">
+                      <LockedLesson />
+                    </button>
                   </Link>
                 </li>
                 <li>
                   <Link to="testspage">
                     <h2 className="lesson_theme">2. Theme: {"Lorem!"}</h2>
-                    <button className="continue_btn"> <LockedLesson /></button>
+                    <button className="continue_btn">
+                      {" "}
+                      <LockedLesson />
+                    </button>
                   </Link>
                 </li>
                 <li>
                   <Link to="testspage">
                     <h2 className="lesson_theme">3. Theme: {"Lorem!"}</h2>
-                    <button className="continue_btn"> <LockedLesson /></button>
+                    <button className="continue_btn">
+                      {" "}
+                      <LockedLesson />
+                    </button>
                   </Link>
                 </li>
                 <li>
@@ -355,31 +395,38 @@ function HomePage({ isOpen, ismainOpen }) {
               </CourseLessons>
             </div>
             <div className="courses">
-              <div className="courses_title" onClick={() => titleHendler()}>
+              <div className="courses_title" onClick={() => settitleOpened({skills: !titleOpened.skills,})}>
                 <h2 className="course_title">Maxsus skillar</h2>
                 <div className="titleOpenIcon">
                   {/* {titleOpened ? <TitleClosing /> : <TitleOpening />} */}
                   <LockedLesson />
-
                 </div>
               </div>
-              <CourseLessons isOpen={titleOpened} className="course_lessons">
+              <CourseLessons isOpen={titleOpened.skills} className="course_lessons">
                 <li>
                   <Link to="/testspage">
                     <h2 className="lesson_theme">1. Theme: {"Hello!"}</h2>
-                    <button className="continue_btn"><LockedLesson/></button>
+                    <button className="continue_btn">
+                      <LockedLesson />
+                    </button>
                   </Link>
                 </li>
                 <li>
                   <Link to="testspage">
                     <h2 className="lesson_theme">2. Theme: {"Lorem!"}</h2>
-                    <button className="continue_btn"> <LockedLesson /></button>
+                    <button className="continue_btn">
+                      {" "}
+                      <LockedLesson />
+                    </button>
                   </Link>
                 </li>
                 <li>
                   <Link to="testspage">
                     <h2 className="lesson_theme">3. Theme: {"Lorem!"}</h2>
-                    <button className="continue_btn"> <LockedLesson /></button>
+                    <button className="continue_btn">
+                      {" "}
+                      <LockedLesson />
+                    </button>
                   </Link>
                 </li>
                 <li>
@@ -408,7 +455,6 @@ function HomePage({ isOpen, ismainOpen }) {
                 </li>
               </CourseLessons>
             </div>
-            
           </div>
         </div>
       </div>

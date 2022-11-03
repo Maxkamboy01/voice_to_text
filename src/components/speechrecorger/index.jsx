@@ -3,9 +3,6 @@ import { useSpeechSynthesis } from "react-speech-kit";
 import { Testcontainer, ResultContainer, PopUpBox, VolumeRange } from "./style";
 import { Link } from "react-router-dom";
 // ICONS
-import Correct from "../../assets/checked.png";
-import Mistake from "../../assets/cancel.png";
-import { BiReset } from "react-icons/bi";
 import { AiFillPlayCircle } from "react-icons/ai";
 // ICONS
 

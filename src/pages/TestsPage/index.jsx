@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  Greeting,
   MatchingImageStyle,
   NumberTestStyle,
   ReadingTestStyle,
@@ -18,7 +19,7 @@ import NumberTestImg from "../../assets/numberTestImg.png";
 function TestsPage({ isOpen, ismainOpen }) {
   return (
     <TestStyle isOpen={isOpen} ismainOpen={ismainOpen}>
-      <div className="container">
+      <Greeting className="container">
         <div className="test_info">
           <h1 className="theme">Hello!</h1>
           <p className="task">Ingliz tilida salomlashaylik!</p>
@@ -40,7 +41,7 @@ function TestsPage({ isOpen, ismainOpen }) {
             taskInstructions="Tepadagi tugmani bosing va audioni qaytaring"
           />
         </VoiceSection>
-      </div>
+      </Greeting>
       <VideoTestStyle className="container">
         <div className="test_info">
           <h1 className="theme">Grammatika vaqti!</h1>

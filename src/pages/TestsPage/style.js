@@ -145,6 +145,10 @@ export const TestStyle = styled.div`
   }
 `;
 
+export const Greeting =styled.div`
+  
+`
+
 export const VoiceSection = styled.div`
   min-width: 150px;
   margin-top: 26px;
