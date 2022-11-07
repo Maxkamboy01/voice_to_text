@@ -1,10 +1,13 @@
 {
   "files": {
     "main.css": "/voice_to_text/static/css/main.0f49ba64.css",
-    "main.js": "/voice_to_text/static/js/main.aa7ae8d1.js",
+    "main.js": "/voice_to_text/static/js/main.5d4ade12.js",
     "static/js/787.cae70fee.chunk.js": "/voice_to_text/static/js/787.cae70fee.chunk.js",
+    "static/media/matchingImg_3.png": "/voice_to_text/static/media/matchingImg_3.066c599304823fccb20c.png",
+    "static/media/matchingImg_4.png": "/voice_to_text/static/media/matchingImg_4.27060c335a8ec09eac29.png",
     "static/media/testpage_guys.png": "/voice_to_text/static/media/testpage_guys.333130d43c7f5ab11ee6.png",
     "static/media/matchingImg.png": "/voice_to_text/static/media/matchingImg.8f4e579ced981f3255fe.png",
+    "static/media/matchingImg_2.png": "/voice_to_text/static/media/matchingImg_2.06a490d163507033b540.png",
     "static/media/twitter.png": "/voice_to_text/static/media/twitter.da5d9bdae849285d229f.png",
     "static/media/google_icon.png": "/voice_to_text/static/media/google_icon.cb97e7f0ca5d739025b2.png",
     "static/media/numberTestImg.png": "/voice_to_text/static/media/numberTestImg.218298666797c08755be.png",
@@ -25,11 +28,11 @@
     "static/media/titleopening.svg": "/voice_to_text/static/media/titleopening.2e0eb198ce599e3a4ee5d4df46fd6bd1.svg",
     "static/media/titleclosing.svg": "/voice_to_text/static/media/titleclosing.ac2b75521e0546594ea1131cd0b2f1f6.svg",
     "main.0f49ba64.css.map": "/voice_to_text/static/css/main.0f49ba64.css.map",
-    "main.aa7ae8d1.js.map": "/voice_to_text/static/js/main.aa7ae8d1.js.map",
+    "main.5d4ade12.js.map": "/voice_to_text/static/js/main.5d4ade12.js.map",
     "787.cae70fee.chunk.js.map": "/voice_to_text/static/js/787.cae70fee.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0f49ba64.css",
-    "static/js/main.aa7ae8d1.js"
+    "static/js/main.5d4ade12.js"
   ]
 }
