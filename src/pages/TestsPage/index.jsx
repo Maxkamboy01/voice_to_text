@@ -79,7 +79,7 @@ function TestsPage({ isOpen, ismainOpen }) {
               <span className="message_author">Sandra</span>
             </div>
             <div className="message_text_box">
-              Hi, John. <u> How are you</u> <i>?</i>{" "}
+              Hi, John. <u> How are you</u> <i>?</i>
             </div>
           </div>
           <div className="message second_message">

@@ -31,9 +31,17 @@ function MainPage(props) {
   return (
     <MainPagestyle>
       <BrowserRouter>
-        <Navbar  setLogin={props.setLogin} sidebarstate={mainsidebarOpen} sidebarsetstate={setmainsidebarOpen} />
+        <Navbar
+          setLogin={props.setLogin}
+          sidebarstate={mainsidebarOpen}
+          sidebarsetstate={setmainsidebarOpen}
+        />
 
-        <Mainsidebarstyle onMouseLeave={()=>setmainsidebarOpen(false)} ismainOpen={mainsidebarOpen}>
+        <Mainsidebarstyle
+          onBlur={() => setmainsidebarOpen(false)}
+          onMouseLeave={() => setmainsidebarOpen(false)}
+          ismainOpen={mainsidebarOpen}
+        >
           <li>
             <Link to="">
               <HomeIcon />
@@ -66,9 +74,9 @@ function MainPage(props) {
               </Link>
             </li>
             <li>
-              <Link onClick={()=>props.setLogin(false)}>
+              <Link onClick={() => props.setLogin(false)}>
                 <LogoutIcon />
-                <h2 >Chiqish</h2>
+                <h2>Chiqish</h2>
               </Link>
             </li>
           </ul>

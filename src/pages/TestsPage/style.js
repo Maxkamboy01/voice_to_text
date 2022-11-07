@@ -145,9 +145,7 @@ export const TestStyle = styled.div`
   }
 `;
 
-export const Greeting =styled.div`
-  
-`
+export const Greeting = styled.div``;
 
 export const VoiceSection = styled.div`
   min-width: 150px;
@@ -161,17 +159,52 @@ export const VoiceSection = styled.div`
 export const VideoTestStyle = styled.div`
   .test_info {
     .theme {
+      font-size: 33px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      @media (max-width: 768px) {
+        font-size: 29px;
+        letter-spacing: 0.08em;
+      }
+      @media (max-width: 512px) {
+        font-size: 27px;
+        letter-spacing: 0.06em;
+      }
     }
-    .tast {
+    .task {
+      font-size: 28px;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      @media (max-width: 768px) {
+        font-size: 25px;
+        letter-spacing: 0.07em;
+      }
+      @media (max-width: 512px) {
+        font-size: 23px;
+        letter-spacing: 0.04em;
+      }
     }
   }
   .main_test_box {
     margin-top: 60px;
     width: auto;
-
+    @media (max-width: 768px) {
+      margin-top: 55px;
+    }
+    @media (max-width: 512px) {
+      margin-top: 50px;
+    }
     iframe {
       width: 945px;
       height: 506px;
+      @media (max-width: 768px) {
+        width: 95vw;
+        height: 70vh;
+      }
+      @media (max-width: 512px) {
+        width: 95vw;
+        height: 70vh;
+      }
     }
     .main_subtitle {
       font-family: "Ibarra Real Nova";
@@ -180,9 +213,21 @@ export const VideoTestStyle = styled.div`
       line-height: 101.5%;
       letter-spacing: 0.055em;
       margin-top: 30px;
+      @media (max-width: 768px) {
+        font-size: 30px;
+      }
+      @media (max-width: 512px) {
+        font-size: 27px;
+      }
     }
     .line {
       margin-top: 50px;
+      @media (max-width: 768px) {
+        margin-top: 45px;
+      }
+      @media (max-width: 512px) {
+        margin-top: 40px;
+      }
     }
   }
 `;
@@ -198,12 +243,17 @@ export const ReadingTestStyle = styled.div`
   .chat_section {
     display: flex;
     flex-direction: column;
-
     .message {
       width: 100%;
       height: auto;
       display: flex;
       margin: 25px 0;
+      @media (max-width: 768px) {
+        margin: 22px 0;
+      }
+      @media (max-width: 512px) {
+        margin: 20px 0;
+      }
       .avatar_box {
         display: flex;
         flex-direction: column;
@@ -214,6 +264,14 @@ export const ReadingTestStyle = styled.div`
           border-radius: 50%;
           background: #df1cff;
           margin: 0 20px;
+          @media (max-width: 768px) {
+            width: 90px;
+            height: 90px;
+          }
+          @media (max-width: 512px) {
+            width: 85px;
+            height: 85px;
+          }
           .avatar_img {
             width: 100%;
           }
@@ -222,6 +280,12 @@ export const ReadingTestStyle = styled.div`
           color: #d67eff;
           font-size: 20px;
           font-weight: 700;
+          @media (max-width: 768px) {
+            font-size: 19px;
+          }
+          @media (max-width: 512px) {
+            font-size: 18px;
+          }
         }
       }
       .message_text_box {
@@ -236,6 +300,18 @@ export const ReadingTestStyle = styled.div`
         font-weight: 700;
         font-size: 24px;
         letter-spacing: 0.1em;
+        @media (max-width: 768px) {
+          height: 90px;
+          padding: 22px 35px;
+          font-size: 22px;
+          font-weight: 500;
+        }
+        @media (max-width: 512px) {
+          height: 85px;
+          padding: 20px 32px;
+          font-size: 18px;
+          font-weight: 600;
+        }
       }
     }
     .first_message {

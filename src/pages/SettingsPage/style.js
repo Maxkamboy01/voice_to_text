@@ -6,10 +6,10 @@ export const SettingsPageStyle = styled.div`
   margin-left: auto;
   padding-bottom: 50px;
   @media (max-width: 768px) {
-    width: ${(props) => (props.ismainOpen ? "66vw" : "100vw")};
+    width: 100vw;
   }
   @media (max-width: 512px) {
-    width: ${(props) => (props.ismainOpen ? "60vw" : "100vw")};
+    width: 100vw;
   }
   .container {
     width: 100%;

@@ -5,10 +5,10 @@ export const HomePageStyle = styled.div`
   height: auto;
   margin-left: auto;
   @media (max-width: 768px) {
-    width: ${(props) => (props.ismainOpen ? "288px" : "100vw")};
+    width: 100vw;
   }
   @media (max-width: 512px) {
-    width: ${(props) => (props.ismainOpen ? "220px" : "100vw")};
+    width: 100vw;
   }
   .container {
     width: 100%;
@@ -37,12 +37,12 @@ export const HomePageStyle = styled.div`
       padding: 40px;
       padding-bottom: 0;
       @media (max-width: 768px) {
-        height: 70px;
+        height: auto;
         padding: 36px;
         padding-left: 19px;
       }
       @media (max-width: 512px) {
-        height: 66px;
+        height: auto;
         padding: 33px;
         padding-left: d18px;
       }

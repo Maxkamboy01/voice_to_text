@@ -76,7 +76,7 @@ export const SidebarStyle = styled.ul`
 
 export const Mainsidebarstyle = styled.ul`
   width: 356px;
-  height: calc(100vh-70px);
+  height: 100vh;
   float: left;
   background: #e0baee;
   position: fixed;
@@ -93,14 +93,16 @@ export const Mainsidebarstyle = styled.ul`
     height: 96vh;
     top: 66px;
     padding-bottom: 18px;
-    left: ${(props) => (props.isOpen ? "0" : "-70vw")};
+    left: ${(props) => (props.ismainOpen ? "0" : "-70vw")};
+    z-index: 111;
   }
   @media (max-width: 512px) {
     width: 220px;
     height: 93vh;
     top: 60px;
     padding-bottom: 16px;
-    left: ${(props) => (props.isOpen ? "0" : "-70vw")};
+    left: ${(props) => (props.ismainOpen ? "0" : "-70vw")};
+    z-index: 111;
   }
   li {
     transition: all ease 500ms;
