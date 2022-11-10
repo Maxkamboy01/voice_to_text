@@ -429,6 +429,58 @@ export const MatchingImageStyle = styled.div`
   }
 `;
 
+export const Scoresection = styled.div`
+  font-family: "Ibarra Real Nova", sans-serif;
+  div {
+    font-size: 24px;
+    font-weight: 100;
+    margin-bottom: 10px;
+    @media (max-width: 768px) {
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+    @media (max-width: 512px) {
+      font-size: 20px;
+      margin-bottom: 7px;
+    }
+  }
+  .button {
+    width: auto;
+    height: 42px;
+    font-size: 20px;
+    padding: 10px 13px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border: 2px solid #df1cff;
+    border-radius: 4px;
+    color: #555;
+    transition: all ease 300ms;
+    @media (max-width: 768px) {
+      font-size: 18px;
+      padding: 8px 11px;
+    }
+    @media (max-width: 512px) {
+      font-size: 17px;
+      padding: 7px 10px;
+    }
+    &:hover {
+      background: #df1cff;
+      color: white;
+      svg {
+        fill: white;
+      }
+    }
+    svg {
+      transition: all ease 00ms;
+      margin: auto;
+      margin-left: 5px;
+    }
+  }
+`;
+
 export const NumberTestStyle = styled.div`
   font-family: "Hind Siliguri" sans-serif;
   .test_info {
@@ -452,6 +504,15 @@ export const NumberTestStyle = styled.div`
         letter-spacing: 0.015em;
         line-height: 130%;
         margin-right: 20px;
+        @media(max-width: 768px){
+          font-size: 58px;
+          margin:right: 17px;
+        }
+        
+        @media(max-width: 512px){
+          font-size: 55px;
+          margin:right: 15px;
+        }
       }
       img {
         width: 100px;
@@ -513,6 +574,158 @@ export const NumberTestStyle = styled.div`
       font-size: 24px;
       letter-spacing: 0.015em;
       line-height: 130%;
+    }
+  }
+`;
+
+export const EnterWordsStyle = styled.div`
+  font-family: "Hind Siliguri" sans-serif;
+  .test_info {
+    margin-bottom: 20px;
+    .theme {
+    }
+    .tast {
+    }
+  }
+  .enter_word_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .message_box {
+      width: 400px;
+      height: 100px;
+      background-color: #fff4e3;
+      border-radius: 50px;
+      padding: 25px 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 700;
+      font-size: 24px;
+      letter-spacing: 0.1em;
+      margin: 20px;
+      input {
+        margin: auto 5px;
+        font-size: 24px;
+        width: 126px;
+        height: 26px;
+        background: #ffffff;
+        border: 1px solid #868686;
+        border-radius: 10px;
+        text-indent: 6px;
+        text-align: center;
+        border-color: ${(props) => (props.valueCorrect ? "#ffbf2b" : "red")};
+        &:focus {
+          box-shadow: 0 0 4px lightgrey;
+        }
+      }
+    }
+    .task_texts_box {
+      margin-top: 20px;
+      .task_title {
+        font-weight: 400;
+        font-size: 32px;
+        letter-spacing: 0.055em;
+      }
+      .line {
+        margin-top: 22px;
+        margin-bottom: 18px;
+      }
+      .task_subtitle {
+        font-weight: 400;
+        font-size: 24px;
+        letter-spacing: 0.015em;
+        line-height: 130%;
+      }
+      .checking_btn {
+        margin-top: 46px;
+        background: linear-gradient(104.82deg, #c242ff 19.77%, #df1cff 81.27%);
+        border: 2px solid transparent;
+        border-radius: 11px;
+        width: 150px;
+        height: 60px;
+        color: white;
+        font-weight: 600;
+        font-size: 24px;
+        font-family: "Hind Vadodara";
+        letter-spacing: -0.04em;
+        &:hover {
+          background: transparent;
+          color: #c242ff;
+          border-color: #c242ff;
+        }
+      }
+    }
+  }
+`;
+
+export const FormBoxStyle = styled.form`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .message_box {
+    width: 400px;
+    height: 100px;
+    background-color: #fff4e3;
+    border-radius: 50px;
+    padding: 25px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: 0.1em;
+    margin: 20px;
+    input {
+      margin: auto 5px;
+      font-size: 24px;
+      width: 126px;
+      height: 26px;
+      background: #ffffff;
+      border-width: 1px;
+      border-radius: 10px;
+      text-indent: 6px;
+      text-align: center;
+      border-color: ${(props) => (props.valueCorrect ? "white" : "green")};
+      &:focus {
+        box-shadow: 0 0 4px lightgrey;
+      }
+    }
+  }
+  .task_texts_box {
+    margin-top: 20px;
+    .task_title {
+      font-weight: 400;
+      font-size: 32px;
+      letter-spacing: 0.055em;
+    }
+    .line {
+      margin-top: 22px;
+      margin-bottom: 18px;
+    }
+    .task_subtitle {
+      font-weight: 400;
+      font-size: 24px;
+      letter-spacing: 0.015em;
+      line-height: 130%;
+    }
+    .checking_btn {
+      margin-top: 46px;
+      background: linear-gradient(104.82deg, #c242ff 19.77%, #df1cff 81.27%);
+      border: 2px solid transparent;
+      border-radius: 11px;
+      width: 150px;
+      height: 60px;
+      color: white;
+      font-weight: 600;
+      font-size: 24px;
+      font-family: "Hind Vadodara";
+      letter-spacing: -0.04em;
+      &:hover {
+        background: transparent;
+        color: #c242ff;
+        border-color: #c242ff;
+      }
     }
   }
 `;

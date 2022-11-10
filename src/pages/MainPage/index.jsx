@@ -29,12 +29,13 @@ function MainPage(props) {
   const [sidebarOpen, setsidebarOpen] = useState(false);
 
   return (
-    <MainPagestyle>
+    <MainPagestyle /* onSwipe={() => setmainsidebarOpen(true)} */>
       <BrowserRouter>
         <Navbar
           setLogin={props.setLogin}
           sidebarstate={mainsidebarOpen}
           sidebarsetstate={setmainsidebarOpen}
+          setmainsidebarOpen={setmainsidebarOpen}
         />
 
         <Mainsidebarstyle
@@ -81,7 +82,10 @@ function MainPage(props) {
             </li>
           </ul>
         </Mainsidebarstyle>
-        <SidebarStyle isOpen={sidebarOpen}>
+        <SidebarStyle
+          onBlur={() => setmainsidebarOpen(false)}
+          isOpen={sidebarOpen}
+        >
           <li className="lesson_info">
             <h2> Lesson {"1"}</h2>
             <h3>Theme: {"Hello!"}</h3>

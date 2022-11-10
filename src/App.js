@@ -5,7 +5,7 @@ import MainPage from "./pages/MainPage/index";
 function App() {
   const userInfo = {
     name: "mahkamboy",
-    password: "parol",
+    password: "kamila",
   };
 
   const [login, setLogin] = useState(true);
@@ -34,13 +34,13 @@ function App() {
       {login ? (
         <MainPage setLogin={setLogin}/>
       ) : (
-        <form onSubmit={Logging}>
-          <h2>hello mister lazy boss</h2>
-          <input type="text" name="name" placeholder="Enter your name" />
+        <form className="login_form" onSubmit={Logging}>
+          <h2>Hello bro😎</h2>
+          <input type="text" name="name" placeholder="Enter username" />
           <input
             type="password"
             name="password"
-            placeholder="Enter your password"
+            placeholder="Enter password"
           />
           <button type="submit">come</button>
         </form>

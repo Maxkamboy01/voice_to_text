@@ -50,13 +50,13 @@ export const NavbarStyle = styled.div`
     }
   }
   .profile {
-    margin-right: 35px;
     position: relative;
+    right: 30px;
     @media (max-width: 768px) {
-      margin-right: 33px;
+      right: 23px;
     }
     @media (max-width: 512px) {
-      margin-right: 30px;
+      right: 20px;
     }
     .avatar_img {
       width: 45px;
