@@ -28,6 +28,13 @@ function MainPage(props) {
   const [mainsidebarOpen, setmainsidebarOpen] = useState(false);
   const [sidebarOpen, setsidebarOpen] = useState(false);
 
+  const closemainSideBar = () => {
+    if (mainsidebarOpen) {
+      setmainsidebarOpen(false);
+    } else {
+    }
+  };
+
   return (
     <MainPagestyle /* onSwipe={() => setmainsidebarOpen(true)} */>
       <BrowserRouter>
@@ -39,8 +46,6 @@ function MainPage(props) {
         />
 
         <Mainsidebarstyle
-          onBlur={() => setmainsidebarOpen(false)}
-          onMouseLeave={() => setmainsidebarOpen(false)}
           ismainOpen={mainsidebarOpen}
         >
           <li>
@@ -121,37 +126,61 @@ function MainPage(props) {
           <Route
             path="/"
             element={
-              <HomePage ismainOpen={mainsidebarOpen} isOpen={sidebarOpen} />
+              <HomePage
+                closemainSideBar={closemainSideBar}
+                ismainOpen={mainsidebarOpen}
+                isOpen={sidebarOpen}
+              />
             }
           />
           <Route
             path="/helppage"
             element={
-              <Helppage ismainOpen={mainsidebarOpen} isOpen={sidebarOpen} />
+              <Helppage
+                closemainSideBar={closemainSideBar}
+                ismainOpen={mainsidebarOpen}
+                isOpen={sidebarOpen}
+              />
             }
           />
           <Route
             path="/contentspage"
             element={
-              <ContentsPage ismainOpen={mainsidebarOpen} isOpen={sidebarOpen} />
+              <ContentsPage
+                closemainSideBar={closemainSideBar}
+                ismainOpen={mainsidebarOpen}
+                isOpen={sidebarOpen}
+              />
             }
           />
           <Route
             path="/authorspage"
             element={
-              <AuthorPage ismainOpen={mainsidebarOpen} isOpen={sidebarOpen} />
+              <AuthorPage
+                closemainSideBar={closemainSideBar}
+                ismainOpen={mainsidebarOpen}
+                isOpen={sidebarOpen}
+              />
             }
           />
           <Route
             path="/settingspage"
             element={
-              <SettingsPage ismainOpen={mainsidebarOpen} isOpen={sidebarOpen} />
+              <SettingsPage
+                closemainSideBar={closemainSideBar}
+                ismainOpen={mainsidebarOpen}
+                isOpen={sidebarOpen}
+              />
             }
           />
           <Route
             path="/testspage"
             element={
-              <TestsPage ismainOpen={mainsidebarOpen} isOpen={sidebarOpen} />
+              <TestsPage
+                closemainSideBar={closemainSideBar}
+                ismainOpen={mainsidebarOpen}
+                isOpen={sidebarOpen}
+              />
             }
           />
         </Routes>

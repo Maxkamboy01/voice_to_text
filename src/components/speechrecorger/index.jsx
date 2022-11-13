@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { useSpeechSynthesis } from "react-speech-kit";
 import { Testcontainer, ResultContainer, PopUpBox, VolumeRange } from "./style";
+import { useSpeechSynthesis } from "react-speech-kit";
 import { Link } from "react-router-dom";
 // ICONS
 import { AiFillPlayCircle } from "react-icons/ai";
@@ -46,7 +46,7 @@ function Speechkit(props) {
     SpeechRecognition.stopListening();
     setresetvalue(true);
     //
-    if (transcript.includes(textvalue)) {
+    if (transcript.toString().includes(textvalue.toString())) {
       settingcorrect();
       console.log(transcript);
     } else {
@@ -58,7 +58,6 @@ function Speechkit(props) {
   const redoTest = (e) => {
     e.preventDefault();
     setresetvalue(true);
-    transcript = null;
   };
 
   const nextTest = (e) => {
@@ -132,7 +131,7 @@ function Speechkit(props) {
         </button>
         {resetvalue ? (
           <PopUpBox>
-            <div className="cover" onClick={() => closeReset()}></div>
+            <div className="cover" onClick={(e) => closeReset(e)}></div>
             <div className="popUpbox">
               <h1 className="test_result_header">
                 {mistakes ? "Ozgina yetmay qoldi😑" : "Good Job!!!🥳"}
@@ -144,7 +143,7 @@ function Speechkit(props) {
               </h2>
               <button className="nextreset_btn">
                 {mistakes ? (
-                  <Link onClick={() => redoTest()} className="link_btn">
+                  <Link onClick={(e) => redoTest(e)} className="link_btn">
                     Boshidan
                     <svg
                       stroke="currentColor"
@@ -163,7 +162,11 @@ function Speechkit(props) {
                     </svg>
                   </Link>
                 ) : (
-                  <Link to="/" onClick={() => nextTest()} className="link_btn">
+                  <Link
+                    to="/"
+                    onClick={(e) => nextTest(e)}
+                    className="link_btn"
+                  >
                     Keyingisi
                     <svg
                       stroke="currentColor"
@@ -219,7 +222,10 @@ function Speechkit(props) {
                 <path d="M16 7v10c1.225-1.1 2-3.229 2-5s-.775-3.9-2-5zM4 17h2.697l5.748 3.832a1.004 1.004 0 0 0 1.027.05A1 1 0 0 0 14 20V4a1 1 0 0 0-1.554-.832L6.697 7H4c-1.103 0-2 .897-2 2v6c0 1.103.897 2 2 2zm0-8h3c.033 0 .061-.016.093-.019a1.027 1.027 0 0 0 .38-.116c.026-.015.057-.017.082-.033L12 5.868v12.264l-4.445-2.964c-.025-.017-.056-.02-.082-.033a.986.986 0 0 0-.382-.116C7.059 15.016 7.032 15 7 15H4V9z"></path>
               </svg>
             </div>
-            <VolumeRange className="volume_range_box" isVolumeOpened={volumeOpened}>
+            <VolumeRange
+              className="volume_range_box"
+              isVolumeOpened={volumeOpened}
+            >
               <input
                 type="range"
                 name="volume_range"

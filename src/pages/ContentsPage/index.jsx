@@ -1,9 +1,13 @@
 import React from "react";
 import { ContentsPageStyle } from "./style";
 
-function ContentsPage({ isOpen, ismainOpen }) {
+function ContentsPage({ isOpen, ismainOpen,closemainSideBar }) {
   return (
-    <ContentsPageStyle isOpen={isOpen} ismainOpen={ismainOpen}>
+    <ContentsPageStyle
+      onClick={() => closemainSideBar()}
+      isOpen={isOpen}
+      ismainOpen={ismainOpen}
+    >
       ContentsPage
     </ContentsPageStyle>
   );

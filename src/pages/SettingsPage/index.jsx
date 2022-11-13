@@ -7,7 +7,7 @@ import Linkedaccounts from "../../components/linkedaccounts/index";
 import SettingLang from "../../components/settinglang/index";
 import { ReactComponent as Arrowright } from "../../assets/rightarrow_icon.svg";
 
-function SettingsPage({ isOpen, ismainOpen }) {
+function SettingsPage({ isOpen, ismainOpen,closemainSideBar }) {
   const [routerpage, setRouterpage] = useState("");
 
   let page = <Password />;
@@ -27,7 +27,11 @@ function SettingsPage({ isOpen, ismainOpen }) {
   settingpage();
 
   return (
-    <SettingsPageStyle isOpen={isOpen} ismainOpen={ismainOpen}>
+    <SettingsPageStyle
+      onClick={() => closemainSideBar()}
+      isOpen={isOpen}
+      ismainOpen={ismainOpen}
+    >
       <div className="container">
         <div className="title main_title">
           <h1 onClick={() => setRouterpage("personal information")}>

@@ -1,9 +1,13 @@
 import React from "react";
 import { AuthorpageStyle } from "./style";
 
-function AuthorPage({ isOpen, ismainOpen }) {
+function AuthorPage({ isOpen, ismainOpen,closemainSideBar }) {
   return (
-    <AuthorpageStyle isOpen={isOpen} ismainOpen={ismainOpen}>
+    <AuthorpageStyle
+      onClick={() => closemainSideBar()}
+      isOpen={isOpen}
+      ismainOpen={ismainOpen}
+    >
       AuthorPage
     </AuthorpageStyle>
   );

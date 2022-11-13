@@ -588,74 +588,6 @@ export const EnterWordsStyle = styled.div`
     }
   }
   .enter_word_box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    .message_box {
-      width: 400px;
-      height: 100px;
-      background-color: #fff4e3;
-      border-radius: 50px;
-      padding: 25px 40px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-weight: 700;
-      font-size: 24px;
-      letter-spacing: 0.1em;
-      margin: 20px;
-      input {
-        margin: auto 5px;
-        font-size: 24px;
-        width: 126px;
-        height: 26px;
-        background: #ffffff;
-        border: 1px solid #868686;
-        border-radius: 10px;
-        text-indent: 6px;
-        text-align: center;
-        border-color: ${(props) => (props.valueCorrect ? "#ffbf2b" : "red")};
-        &:focus {
-          box-shadow: 0 0 4px lightgrey;
-        }
-      }
-    }
-    .task_texts_box {
-      margin-top: 20px;
-      .task_title {
-        font-weight: 400;
-        font-size: 32px;
-        letter-spacing: 0.055em;
-      }
-      .line {
-        margin-top: 22px;
-        margin-bottom: 18px;
-      }
-      .task_subtitle {
-        font-weight: 400;
-        font-size: 24px;
-        letter-spacing: 0.015em;
-        line-height: 130%;
-      }
-      .checking_btn {
-        margin-top: 46px;
-        background: linear-gradient(104.82deg, #c242ff 19.77%, #df1cff 81.27%);
-        border: 2px solid transparent;
-        border-radius: 11px;
-        width: 150px;
-        height: 60px;
-        color: white;
-        font-weight: 600;
-        font-size: 24px;
-        font-family: "Hind Vadodara";
-        letter-spacing: -0.04em;
-        &:hover {
-          background: transparent;
-          color: #c242ff;
-          border-color: #c242ff;
-        }
-      }
-    }
   }
 `;
 
@@ -676,21 +608,6 @@ export const FormBoxStyle = styled.form`
     font-size: 24px;
     letter-spacing: 0.1em;
     margin: 20px;
-    input {
-      margin: auto 5px;
-      font-size: 24px;
-      width: 126px;
-      height: 26px;
-      background: #ffffff;
-      border-width: 1px;
-      border-radius: 10px;
-      text-indent: 6px;
-      text-align: center;
-      border-color: ${(props) => (props.valueCorrect ? "white" : "green")};
-      &:focus {
-        box-shadow: 0 0 4px lightgrey;
-      }
-    }
   }
   .task_texts_box {
     margin-top: 20px;
@@ -727,5 +644,20 @@ export const FormBoxStyle = styled.form`
         border-color: #c242ff;
       }
     }
+  }
+`;
+
+export const MatchingImgInput = styled.input`
+  margin: auto 5px;
+  font-size: 24px;
+  width: 126px;
+  height: 26px;
+  background-color: ${(props) => (props.correctValue ? "#fff" : "transparent")};
+  border: 1px solid ${(props) => (props.correctValue ? "green" : "red")};
+  border-radius: 10px;
+  text-indent: 6px;
+  text-align: center;
+  &:focus {
+    box-shadow: 0 0 4px lightgrey;
   }
 `;

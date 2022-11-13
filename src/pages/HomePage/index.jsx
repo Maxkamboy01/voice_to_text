@@ -6,7 +6,7 @@ import { ReactComponent as LockedLesson } from "../../assets/locked_lesson.svg";
 import { CourseLessons, HomePageStyle } from "./style";
 import { Link } from "react-router-dom";
 
-function HomePage({ isOpen, ismainOpen }) {
+function HomePage({ isOpen, ismainOpen,closemainSideBar }) {
   const [titleOpened, settitleOpened] = useState({
     beginner: true,
     elementary: false,
@@ -19,6 +19,7 @@ function HomePage({ isOpen, ismainOpen }) {
 
   return (
     <HomePageStyle
+      onClick={() => closemainSideBar()}
       isOpen={isOpen}
       ismainOpen={ismainOpen}
       istitleOpen={titleOpened}
@@ -29,13 +30,21 @@ function HomePage({ isOpen, ismainOpen }) {
           <h2 className="opened_text">Ochiq qismlar:</h2>
           <div className="opened_courses">
             <div className="courses">
-              <div className="courses_title" onClick={() => settitleOpened({beginner: !titleOpened.beginner})}>
+              <div
+                className="courses_title"
+                onClick={() =>
+                  settitleOpened({ beginner: !titleOpened.beginner })
+                }
+              >
                 <h2 className="course_title">Beginner</h2>
                 <div className="titleOpenIcon">
                   {titleOpened ? <TitleClosing /> : <TitleOpening />}
                 </div>
               </div>
-              <CourseLessons isOpen={titleOpened.beginner} className="course_lessons">
+              <CourseLessons
+                isOpen={titleOpened.beginner}
+                className="course_lessons"
+              >
                 <li>
                   <Link to="/testspage">
                     <h2 className="lesson_theme">1. Theme: {"Hello!"}</h2>
@@ -89,7 +98,9 @@ function HomePage({ isOpen, ismainOpen }) {
             <div className="courses">
               <div
                 className="courses_title"
-                onClick={() => settitleOpened({ elementary: !titleOpened.elementary })}
+                onClick={() =>
+                  settitleOpened({ elementary: !titleOpened.elementary })
+                }
               >
                 <h2 className="course_title">Elementary</h2>
                 <div className="titleOpenIcon">
@@ -97,7 +108,10 @@ function HomePage({ isOpen, ismainOpen }) {
                   <LockedLesson />
                 </div>
               </div>
-              <CourseLessons isOpen={titleOpened.elementary} className="course_lessons">
+              <CourseLessons
+                isOpen={titleOpened.elementary}
+                className="course_lessons"
+              >
                 <li>
                   <Link to="/testspage">
                     <h2 className="lesson_theme">1. Theme: {"Hello!"}</h2>
@@ -151,14 +165,24 @@ function HomePage({ isOpen, ismainOpen }) {
               </CourseLessons>
             </div>
             <div className="courses">
-              <div className="courses_title" onClick={() => settitleOpened({preintermidiate:!titleOpened.preintermidiate,})}>
+              <div
+                className="courses_title"
+                onClick={() =>
+                  settitleOpened({
+                    preintermidiate: !titleOpened.preintermidiate,
+                  })
+                }
+              >
                 <h2 className="course_title">Pre-Intermidiate</h2>
                 <div className="titleOpenIcon">
                   {/* {titleOpened ? <TitleClosing /> : <TitleOpening />} */}
                   <LockedLesson />
                 </div>
               </div>
-              <CourseLessons isOpen={titleOpened.preintermidiate} className="course_lessons">
+              <CourseLessons
+                isOpen={titleOpened.preintermidiate}
+                className="course_lessons"
+              >
                 <li>
                   <Link to="/testspage">
                     <h2 className="lesson_theme">1. Theme: {"Hello!"}</h2>
@@ -212,14 +236,22 @@ function HomePage({ isOpen, ismainOpen }) {
               </CourseLessons>
             </div>
             <div className="courses">
-              <div className="courses_title" onClick={() => settitleOpened({intermidiate:!titleOpened.intermidiate,})}>
+              <div
+                className="courses_title"
+                onClick={() =>
+                  settitleOpened({ intermidiate: !titleOpened.intermidiate })
+                }
+              >
                 <h2 className="course_title">Intermediate</h2>
                 <div className="titleOpenIcon">
                   {/* {titleOpened ? <TitleClosing /> : <TitleOpening />} */}
                   <LockedLesson />
                 </div>
               </div>
-              <CourseLessons isOpen={titleOpened.intermidiate} className="course_lessons">
+              <CourseLessons
+                isOpen={titleOpened.intermidiate}
+                className="course_lessons"
+              >
                 <li>
                   <Link to="/testspage">
                     <h2 className="lesson_theme">1. Theme: {"Hello!"}</h2>
@@ -273,14 +305,24 @@ function HomePage({ isOpen, ismainOpen }) {
               </CourseLessons>
             </div>
             <div className="courses">
-              <div className="courses_title" onClick={() => settitleOpened({upperintermidiate:!titleOpened.upperintermidiate,})}>
+              <div
+                className="courses_title"
+                onClick={() =>
+                  settitleOpened({
+                    upperintermidiate: !titleOpened.upperintermidiate,
+                  })
+                }
+              >
                 <h2 className="course_title">Upper-Intermediate</h2>
                 <div className="titleOpenIcon">
                   {/* {titleOpened ? <TitleClosing /> : <TitleOpening />} */}
                   <LockedLesson />
                 </div>
               </div>
-              <CourseLessons isOpen={titleOpened.upperintermidiate} className="course_lessons">
+              <CourseLessons
+                isOpen={titleOpened.upperintermidiate}
+                className="course_lessons"
+              >
                 <li>
                   <Link to="/testspage">
                     <h2 className="lesson_theme">1. Theme: {"Hello!"}</h2>
@@ -334,14 +376,22 @@ function HomePage({ isOpen, ismainOpen }) {
               </CourseLessons>
             </div>
             <div className="courses">
-              <div className="courses_title" onClick={() => settitleOpened({advanced: !titleOpened.advanced,})}>
+              <div
+                className="courses_title"
+                onClick={() =>
+                  settitleOpened({ advanced: !titleOpened.advanced })
+                }
+              >
                 <h2 className="course_title">Advanced</h2>
                 <div className="titleOpenIcon">
                   {/* {titleOpened ? <TitleClosing /> : <TitleOpening />} */}
                   <LockedLesson />
                 </div>
               </div>
-              <CourseLessons isOpen={titleOpened.advanced} className="course_lessons">
+              <CourseLessons
+                isOpen={titleOpened.advanced}
+                className="course_lessons"
+              >
                 <li>
                   <Link to="/testspage">
                     <h2 className="lesson_theme">1. Theme: {"Hello!"}</h2>
@@ -395,14 +445,20 @@ function HomePage({ isOpen, ismainOpen }) {
               </CourseLessons>
             </div>
             <div className="courses">
-              <div className="courses_title" onClick={() => settitleOpened({skills: !titleOpened.skills,})}>
+              <div
+                className="courses_title"
+                onClick={() => settitleOpened({ skills: !titleOpened.skills })}
+              >
                 <h2 className="course_title">Maxsus skillar</h2>
                 <div className="titleOpenIcon">
                   {/* {titleOpened ? <TitleClosing /> : <TitleOpening />} */}
                   <LockedLesson />
                 </div>
               </div>
-              <CourseLessons isOpen={titleOpened.skills} className="course_lessons">
+              <CourseLessons
+                isOpen={titleOpened.skills}
+                className="course_lessons"
+              >
                 <li>
                   <Link to="/testspage">
                     <h2 className="lesson_theme">1. Theme: {"Hello!"}</h2>

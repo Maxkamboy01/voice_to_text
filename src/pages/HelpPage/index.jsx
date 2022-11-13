@@ -1,9 +1,15 @@
 import React from "react";
 import { HelppageStyle } from "./style";
 
-function Helppage({ isOpen, ismainOpen }) {
+function Helppage({ isOpen, ismainOpen,closemainSideBar }) {
   return (
-    <HelppageStyle isOpen={isOpen} ismainOpen={ismainOpen}>Helppage</HelppageStyle>
+    <HelppageStyle
+      onClick={() => closemainSideBar()}
+      isOpen={isOpen}
+      ismainOpen={ismainOpen}
+    >
+      Helppage
+    </HelppageStyle>
   );
 }
 
