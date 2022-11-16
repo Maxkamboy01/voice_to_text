@@ -36,6 +36,30 @@ export const TestStyle = styled.div`
     }
     .test_info {
       line-height: 35px;
+      <VideoTestStyle className="container">
+      <div className="test_info">
+        <h1 className="theme">Grammatika vaqti!</h1>
+        <p className="task">
+          Quyidagi videoni yaxshilab tushunib, daftaringizga ham yozib
+          oling!
+        </p>
+      </div>
+      <div className="main_test_box">
+        <iframe
+          width="885"
+          height="498"
+          src="https://www.youtube.com/embed/W-sZo6Gtx_E"
+          title="Register and Login Page Tutorial | ReactJs, NodeJS, MySQL (Beginner)"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+        <p className="main_subtitle">
+          Ushbu videoni yaxshi tushinmagunizcha qayta-qayta ko’ring, chunki
+          keyingi mashqlarda bu bilimlar kerak bo’ladi!
+        </p>
+        <div className="line"></div>
+      </div>
+    </VideoTestStyle>
       @media (max-width: 768px) {
         line-height: 34px;
         margin-bottom: 60px;
@@ -145,8 +169,6 @@ export const TestStyle = styled.div`
   }
 `;
 
-export const Greeting = styled.div``;
-
 export const VoiceSection = styled.div`
   min-width: 150px;
   margin-top: 26px;
@@ -156,508 +178,23 @@ export const VoiceSection = styled.div`
   }
 `;
 
-export const VideoTestStyle = styled.div`
-  .test_info {
-    .theme {
-      font-size: 33px;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      @media (max-width: 768px) {
-        font-size: 29px;
-        letter-spacing: 0.08em;
-      }
-      @media (max-width: 512px) {
-        font-size: 27px;
-        letter-spacing: 0.06em;
-      }
-    }
-    .task {
-      font-size: 28px;
-      font-weight: 400;
-      letter-spacing: 0.1em;
-      @media (max-width: 768px) {
-        font-size: 25px;
-        letter-spacing: 0.07em;
-      }
-      @media (max-width: 512px) {
-        font-size: 23px;
-        letter-spacing: 0.04em;
-      }
-    }
-  }
-  .main_test_box {
-    margin-top: 60px;
-    width: auto;
-    @media (max-width: 768px) {
-      margin-top: 55px;
-    }
-    @media (max-width: 512px) {
-      margin-top: 50px;
-    }
-    iframe {
-      width: 945px;
-      height: 506px;
-      @media (max-width: 768px) {
-        width: 95vw;
-        height: 70vh;
-      }
-      @media (max-width: 512px) {
-        width: 95vw;
-        height: 70vh;
-      }
-    }
-    .main_subtitle {
-      font-family: "Ibarra Real Nova";
-      font-weight: 400;
-      font-size: 32px;
-      line-height: 101.5%;
-      letter-spacing: 0.055em;
-      margin-top: 30px;
-      @media (max-width: 768px) {
-        font-size: 30px;
-      }
-      @media (max-width: 512px) {
-        font-size: 27px;
-      }
-    }
-    .line {
-      margin-top: 50px;
-      @media (max-width: 768px) {
-        margin-top: 45px;
-      }
-      @media (max-width: 512px) {
-        margin-top: 40px;
-      }
-    }
-  }
-`;
-
-export const ReadingTestStyle = styled.div`
-  .test_info {
-    margin-bottom: 20px;
-    .theme {
-    }
-    .tast {
-    }
-  }
-  .chat_section {
-    display: flex;
-    flex-direction: column;
-    .message {
-      width: 100%;
-      height: auto;
-      display: flex;
-      margin: 25px 0;
-      @media (max-width: 768px) {
-        margin: 22px 0;
-      }
-      @media (max-width: 512px) {
-        margin: 20px 0;
-      }
-      .avatar_box {
-        display: flex;
-        flex-direction: column;
-        .avatar_img_box {
-          width: 100px;
-          height: 100px;
-          overflow: hidden;
-          border-radius: 50%;
-          background: #df1cff;
-          margin: 0 20px;
-          @media (max-width: 768px) {
-            width: 90px;
-            height: 90px;
-          }
-          @media (max-width: 512px) {
-            width: 85px;
-            height: 85px;
-          }
-          .avatar_img {
-            width: 100%;
-          }
-        }
-        .message_author {
-          color: #d67eff;
-          font-size: 20px;
-          font-weight: 700;
-          @media (max-width: 768px) {
-            font-size: 19px;
-          }
-          @media (max-width: 512px) {
-            font-size: 18px;
-          }
-        }
-      }
-      .message_text_box {
-        width: auto;
-        height: 100px;
-        border-radius: 60px;
-        background: #fff4e3;
-        padding: 25px 40px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-weight: 700;
-        font-size: 24px;
-        letter-spacing: 0.1em;
-        @media (max-width: 768px) {
-          height: 90px;
-          padding: 22px 35px;
-          font-size: 22px;
-          font-weight: 500;
-        }
-        @media (max-width: 512px) {
-          height: 85px;
-          padding: 20px 32px;
-          font-size: 18px;
-          font-weight: 600;
-        }
-      }
-    }
-    .first_message {
-      .avatar_box {
-        .avatar_img_box {
-          .avatar_img {
-          }
-        }
-        .message_author {
-        }
-      }
-      .message_text_box {
-        border-bottom-left-radius: 0;
-      }
-    }
-    .second_message {
-      flex-direction: row-reverse;
-      .avatar_box {
-        .avatar_img_box {
-          .avatar_img {
-          }
-        }
-        .message_author {
-        }
-      }
-      .message_text_box {
-        border-bottom-right-radius: 0;
-      }
-    }
-  }
-`;
-
-export const MatchingImageStyle = styled.div`
-  font-family: "Ibarra Real Nova", sans-serif;
-  .test_info {
-    margin-bottom: 20px;
-    .theme {
-    }
-    .tast {
-    }
-  }
-  .images_section {
-    display: flex;
-    flex-direction: column;
-    .img_box {
-      width: 250px;
-      height: 155px;
-      margin: 20px auto;
-      img {
-        width: 100%;
-      }
-    }
-    .test_options_box {
-      width: 440px;
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      li {
-        width: 200px;
-        height: 70px;
-        background: #f2beff;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        border-radius: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-top: 33px;
-        font-size: 20px;
-        font-weight: 600;
-        letter-spacing: 0.015em;
-        cursor: pointer;
-        &:hover {
-          transform: scale(1.05);
-        }
-      }
-    }
-    .test№ {
-    }
-  }
-  .task_texts_box {
-    margin-top: 40px;
-    .task_title {
-      font-weight: 400;
-      font-size: 32px;
-      letter-spacing: 0.055em;
-    }
-    .line {
-      margin-top: 22px;
-      margin-bottom: 18px;
-    }
-    .task_subtitle {
-      font-weight: 400;
-      font-size: 24px;
-      letter-spacing: 0.015em;
-      line-height: 130%;
-    }
-    .checking_btn {
-      margin-top: 46px;
-      background: linear-gradient(104.82deg, #c242ff 19.77%, #df1cff 81.27%);
-      border: 2px solid transparent;
-      border-radius: 11px;
-      width: 150px;
-      height: 60px;
-      color: white;
-      font-weight: 600;
-      font-size: 24px;
-      font-family: "Hind Vadodara";
-      letter-spacing: -0.04em;
-      &:hover {
-        background: transparent;
-        color: #c242ff;
-        border-color: #c242ff;
-      }
-    }
-  }
-`;
-
-export const Scoresection = styled.div`
-  font-family: "Ibarra Real Nova", sans-serif;
-  div {
-    font-size: 24px;
-    font-weight: 100;
-    margin-bottom: 10px;
-    @media (max-width: 768px) {
-      font-size: 22px;
-      margin-bottom: 8px;
-    }
-    @media (max-width: 512px) {
-      font-size: 20px;
-      margin-bottom: 7px;
-    }
-  }
-  .button {
-    width: auto;
-    height: 42px;
-    font-size: 20px;
-    padding: 10px 13px;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: transparent;
-    border: 2px solid #df1cff;
-    border-radius: 4px;
-    color: #555;
-    transition: all ease 300ms;
-    @media (max-width: 768px) {
-      font-size: 18px;
-      padding: 8px 11px;
-    }
-    @media (max-width: 512px) {
-      font-size: 17px;
-      padding: 7px 10px;
-    }
-    &:hover {
-      background: #df1cff;
-      color: white;
-      svg {
-        fill: white;
-      }
-    }
-    svg {
-      transition: all ease 00ms;
-      margin: auto;
-      margin-left: 5px;
-    }
-  }
-`;
-
-export const NumberTestStyle = styled.div`
-  font-family: "Hind Siliguri" sans-serif;
-  .test_info {
-    margin-bottom: 20px;
-    .theme {
-    }
-    .tast {
-    }
-  }
-  .test_content_box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    .test_content {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      .number_box {
-        font-weight: 900;
-        font-size: 64px;
-        letter-spacing: 0.015em;
-        line-height: 130%;
-        margin-right: 20px;
-        @media(max-width: 768px){
-          font-size: 58px;
-          margin:right: 17px;
-        }
-        
-        @media(max-width: 512px){
-          font-size: 55px;
-          margin:right: 15px;
-        }
-      }
-      img {
-        width: 100px;
-      }
-    }
-    .test№ {
-    }
-  }
-  .test_working_btn {
-    width: 254px;
-    margin-top: 120px;
-    display: flex;
-    justify-content: space-between;
-    button {
-      width: 60px;
-      height: 60px;
-      border: 3px solid white;
-      border-radius: 50%;
-
-      &:hover {
-        svg {
-          transform: scale(0.8);
-        }
-      }
-      svg {
-        transform: scale(0.7);
-      }
-    }
-    .convert {
-      background: linear-gradient(
-        180deg,
-        rgba(0, 59, 218, 1) 0%,
-        rgba(0, 108, 230, 1) 30%,
-        rgba(0, 148, 239, 1) 50%,
-        rgba(0, 176, 243, 1) 70%,
-        rgba(0, 212, 254, 1) 100%
-      );
-    }
-    .volume {
-      background: #000;
-      svg {
-        fill: white;
-      }
-    }
-  }
-  .task_texts_box {
-    margin-top: 20px;
-    .task_title {
-      font-weight: 400;
-      font-size: 32px;
-      letter-spacing: 0.055em;
-    }
-    .line {
-      margin-top: 22px;
-      margin-bottom: 18px;
-    }
-    .task_subtitle {
-      font-weight: 400;
-      font-size: 24px;
-      letter-spacing: 0.015em;
-      line-height: 130%;
-    }
-  }
-`;
-
-export const EnterWordsStyle = styled.div`
-  font-family: "Hind Siliguri" sans-serif;
-  .test_info {
-    margin-bottom: 20px;
-    .theme {
-    }
-    .tast {
-    }
-  }
-  .enter_word_box {
-  }
-`;
-
-export const FormBoxStyle = styled.form`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  .message_box {
-    width: 400px;
-    height: 100px;
-    background-color: #fff4e3;
-    border-radius: 50px;
-    padding: 25px 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 700;
-    font-size: 24px;
-    letter-spacing: 0.1em;
-    margin: 20px;
-  }
-  .task_texts_box {
-    margin-top: 20px;
-    .task_title {
-      font-weight: 400;
-      font-size: 32px;
-      letter-spacing: 0.055em;
-    }
-    .line {
-      margin-top: 22px;
-      margin-bottom: 18px;
-    }
-    .task_subtitle {
-      font-weight: 400;
-      font-size: 24px;
-      letter-spacing: 0.015em;
-      line-height: 130%;
-    }
-    .checking_btn {
-      margin-top: 46px;
-      background: linear-gradient(104.82deg, #c242ff 19.77%, #df1cff 81.27%);
-      border: 2px solid transparent;
-      border-radius: 11px;
-      width: 150px;
-      height: 60px;
-      color: white;
-      font-weight: 600;
-      font-size: 24px;
-      font-family: "Hind Vadodara";
-      letter-spacing: -0.04em;
-      &:hover {
-        background: transparent;
-        color: #c242ff;
-        border-color: #c242ff;
-      }
-    }
-  }
-`;
-
-export const MatchingImgInput = styled.input`
-  margin: auto 5px;
+export const NextTestBtnStyle = styled.button`
+  width: 170px;
+  height: 60px;
+  background-color: transparent;
+  border: 2px solid #df1cff;
+  border-radius: 6px;
+  color: #df1cff;
+  float: right;
+  margin-left: auto;
+  margin-right: 100px;
   font-size: 24px;
-  width: 126px;
-  height: 26px;
-  background-color: ${(props) => (props.correctValue ? "#fff" : "transparent")};
-  border: 1px solid ${(props) => (props.correctValue ? "green" : "red")};
-  border-radius: 10px;
-  text-indent: 6px;
-  text-align: center;
-  &:focus {
-    box-shadow: 0 0 4px lightgrey;
+  letter-spacing: 1px;
+  font-weight: 700;
+  &:hover {
+    background-color: #df1cff;
+    color: #E3D6FF;
+    border-color: 2px solid #E3D6FF;
+    margin-right: 90px;
   }
 `;

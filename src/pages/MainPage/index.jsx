@@ -27,6 +27,7 @@ import { ReactComponent as LogoutIcon } from "../../assets/logout_icon.svg";
 function MainPage(props) {
   const [mainsidebarOpen, setmainsidebarOpen] = useState(false);
   const [sidebarOpen, setsidebarOpen] = useState(false);
+  const [currentTestLink, setCurrentTestLink] = useState("");
 
   const closemainSideBar = () => {
     if (mainsidebarOpen) {
@@ -40,14 +41,13 @@ function MainPage(props) {
       <BrowserRouter>
         <Navbar
           setLogin={props.setLogin}
-          sidebarstate={mainsidebarOpen}
-          sidebarsetstate={setmainsidebarOpen}
+          sidebarstate={sidebarOpen}
+          sidebarsetstate={setsidebarOpen}
+          mainsidebarOpen={mainsidebarOpen}
           setmainsidebarOpen={setmainsidebarOpen}
         />
 
-        <Mainsidebarstyle
-          ismainOpen={mainsidebarOpen}
-        >
+        <Mainsidebarstyle ismainOpen={mainsidebarOpen}>
           <li>
             <Link to="">
               <HomeIcon />
@@ -95,30 +95,26 @@ function MainPage(props) {
             <h2> Lesson {"1"}</h2>
             <h3>Theme: {"Hello!"}</h3>
           </li>
-          <li>
-            <Link to="/testspage">
-              {/* {id} */}1. {"Greating"}
-            </Link>
+          <li onClick={() => setCurrentTestLink("greetingtest")}>
+            {/* {id} */}1. {"Greating!"}
           </li>
-          <li>
-            <Link to="/testspage">
-              {/* {id} */}2. {"Meeting"}
-            </Link>
+          <li onClick={() => setCurrentTestLink("videotest")}>
+            {/* {id} */}2. {"Video!"}
           </li>
-          <li>
-            <Link to="/testspage">
-              {/* {id} */}3. {"Task1"}
-            </Link>
+          <li onClick={() => setCurrentTestLink("readingtest")}>
+            {/* {id} */}3. {"Reading!"}
           </li>
-          <li>
-            <Link to="/testspage">
-              {/* {id} */}4. {"Greating"}
-            </Link>
+          <li onClick={() => setCurrentTestLink("matchingtest")}>
+            {/* {id} */}4. {"Matching!"}
           </li>
-          <li>
-            <Link to="/testspage">
-              {/* {id} */}5. {"Greating"}
-            </Link>
+          <li onClick={() => setCurrentTestLink("numbertest")}>
+            {/* {id} */}5. {"Numbers!"}
+          </li>
+          <li onClick={() => setCurrentTestLink("enterwordstest")}>
+            {/* {id} */}6. {"Enter words!"}
+          </li>
+          <li onClick={() => setCurrentTestLink("greeting")}>
+            {/* {id} */}7. {"Others!"}
           </li>
         </SidebarStyle>
 
@@ -130,6 +126,7 @@ function MainPage(props) {
                 closemainSideBar={closemainSideBar}
                 ismainOpen={mainsidebarOpen}
                 isOpen={sidebarOpen}
+                closeSideBar={setsidebarOpen}
               />
             }
           />
@@ -140,6 +137,7 @@ function MainPage(props) {
                 closemainSideBar={closemainSideBar}
                 ismainOpen={mainsidebarOpen}
                 isOpen={sidebarOpen}
+                closeSideBar={setsidebarOpen}
               />
             }
           />
@@ -150,6 +148,7 @@ function MainPage(props) {
                 closemainSideBar={closemainSideBar}
                 ismainOpen={mainsidebarOpen}
                 isOpen={sidebarOpen}
+                closeSideBar={setsidebarOpen}
               />
             }
           />
@@ -160,6 +159,7 @@ function MainPage(props) {
                 closemainSideBar={closemainSideBar}
                 ismainOpen={mainsidebarOpen}
                 isOpen={sidebarOpen}
+                closeSideBar={setsidebarOpen}
               />
             }
           />
@@ -170,6 +170,7 @@ function MainPage(props) {
                 closemainSideBar={closemainSideBar}
                 ismainOpen={mainsidebarOpen}
                 isOpen={sidebarOpen}
+                closeSideBar={setsidebarOpen}
               />
             }
           />
@@ -177,9 +178,11 @@ function MainPage(props) {
             path="/testspage"
             element={
               <TestsPage
+                currenttestLink={currentTestLink}
                 closemainSideBar={closemainSideBar}
                 ismainOpen={mainsidebarOpen}
                 isOpen={sidebarOpen}
+                closeSideBar={setsidebarOpen}
               />
             }
           />

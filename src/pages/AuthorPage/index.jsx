@@ -1,10 +1,15 @@
 import React from "react";
 import { AuthorpageStyle } from "./style";
 
-function AuthorPage({ isOpen, ismainOpen,closemainSideBar }) {
+function AuthorPage({ isOpen, ismainOpen, closemainSideBar, closeSideBar }) {
+  const closeLeftBars = () => {
+    closemainSideBar(false);
+    closeSideBar(false);
+  };
+
   return (
     <AuthorpageStyle
-      onClick={() => closemainSideBar()}
+      onClick={() => closeLeftBars()}
       isOpen={isOpen}
       ismainOpen={ismainOpen}
     >

@@ -147,10 +147,10 @@ export const Mainsidebarstyle = styled.ul`
         margin-left: 20px;
         margin-right: 10px;
         @media (max-width: 768px) {
-          margin-left: 18px;
+          margin-left: 16px;
         }
         @media (max-width: 512px) {
-          margin-right: 18px;
+          margin-right: 12px;
         }
       }
       h2 {

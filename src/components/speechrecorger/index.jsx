@@ -13,6 +13,7 @@ import SpeechRecognition, {
 function Speechkit(props) {
   const [mistakes, setMistakes] = useState(true);
   const [volumeOpened, setvolumeOpened] = useState(false);
+  const [volumeValue, setVolumeValue] = useState(0.5);
   const { speak, cancel, voices } = useSpeechSynthesis({ lang: "en" });
   const [textvalue, settextvalue] = useState(props.testText);
   const [resetvalue, setresetvalue] = useState(false);
@@ -82,6 +83,9 @@ function Speechkit(props) {
     // setvolumeOpened(!volumeOpened);
     console.log(volumeOpened);
   };
+
+  const utterThis = new SpeechSynthesisUtterance(textvalue);
+  utterThis.volume = volumeValue;
 
   return (
     <div
@@ -228,6 +232,8 @@ function Speechkit(props) {
             >
               <input
                 type="range"
+                onChange={(e) => setVolumeValue(e.target.value)}
+                value={0.5}
                 name="volume_range"
                 className="volume_range"
                 id="volume_range"

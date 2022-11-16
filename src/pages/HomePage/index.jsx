@@ -6,7 +6,7 @@ import { ReactComponent as LockedLesson } from "../../assets/locked_lesson.svg";
 import { CourseLessons, HomePageStyle } from "./style";
 import { Link } from "react-router-dom";
 
-function HomePage({ isOpen, ismainOpen,closemainSideBar }) {
+function HomePage({ isOpen, ismainOpen, closemainSideBar, closeSideBar }) {
   const [titleOpened, settitleOpened] = useState({
     beginner: true,
     elementary: false,
@@ -17,9 +17,14 @@ function HomePage({ isOpen, ismainOpen,closemainSideBar }) {
     skills: false,
   });
 
+  const closeLeftBars = () => {
+    closemainSideBar(false);
+    closeSideBar(false);
+  };
+
   return (
     <HomePageStyle
-      onClick={() => closemainSideBar()}
+      onClick={() => closeLeftBars()}
       isOpen={isOpen}
       ismainOpen={ismainOpen}
       istitleOpen={titleOpened}

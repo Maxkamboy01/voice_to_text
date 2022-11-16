@@ -7,7 +7,13 @@ import Linkedaccounts from "../../components/linkedaccounts/index";
 import SettingLang from "../../components/settinglang/index";
 import { ReactComponent as Arrowright } from "../../assets/rightarrow_icon.svg";
 
-function SettingsPage({ isOpen, ismainOpen,closemainSideBar }) {
+function SettingsPage({ isOpen, ismainOpen,closemainSideBar,closeSideBar }) {
+
+  const closeLeftBars = () => {
+    closemainSideBar(false);
+    closeSideBar(false);
+  };
+
   const [routerpage, setRouterpage] = useState("");
 
   let page = <Password />;
@@ -28,7 +34,7 @@ function SettingsPage({ isOpen, ismainOpen,closemainSideBar }) {
 
   return (
     <SettingsPageStyle
-      onClick={() => closemainSideBar()}
+      onClick={() => closeLeftBars()}
       isOpen={isOpen}
       ismainOpen={ismainOpen}
     >

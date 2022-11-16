@@ -1,10 +1,16 @@
 import React from "react";
 import { ContentsPageStyle } from "./style";
 
-function ContentsPage({ isOpen, ismainOpen,closemainSideBar }) {
+function ContentsPage({ isOpen, ismainOpen,closemainSideBar,closeSideBar }) {
+
+  const closeLeftBars = () => {
+    closemainSideBar(false);
+    closeSideBar(false);
+  };
+
   return (
     <ContentsPageStyle
-      onClick={() => closemainSideBar()}
+      onClick={() => closeLeftBars()}
       isOpen={isOpen}
       ismainOpen={ismainOpen}
     >
