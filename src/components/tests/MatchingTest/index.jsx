@@ -45,26 +45,26 @@ function MatchingTest() {
         { answerText: "HAMBURGER", isCorrect: false },
       ],
     },
-    // {
-    //   imageurl: MatchingImg_4,
-    //   answerOptions: [
-    //     { answerText: "HOUSE", isCorrect: false },
-    //     { answerText: "PHOTO", isCorrect: false },
-    //     { answerText: "BOOK", isCorrect: false },
-    //     { answerText: "HAMBURGER", isCorrect: true },
-    //   ],
-    // },
+    {
+      imageurl: MatchingImg_4,
+      answerOptions: [
+        { answerText: "HOUSE", isCorrect: false },
+        { answerText: "PHOTO", isCorrect: false },
+        { answerText: "BOOK", isCorrect: false },
+        { answerText: "HAMBURGER", isCorrect: true },
+      ],
+    },
   ];
+
   const [currentQuestion, setcurrentQuestion] = useState(0);
   const [score, setscore] = useState(0);
   const [showScore, setshowScore] = useState(false);
 
   const handleAnswerOptionClick = (isCorrect, answerText) => {
-    // speak({ text: answerText, voice: voices[2] });
     if (isCorrect) {
       setscore(score + 1);
     }
-
+    
     const nextQuestion = currentQuestion + 1;
     if (nextQuestion < matchingOptions.length) {
       setcurrentQuestion(nextQuestion);
@@ -72,6 +72,8 @@ function MatchingTest() {
       setshowScore(true);
     }
   };
+
+  
 
   const refresh = () => {
     setcurrentQuestion(0);

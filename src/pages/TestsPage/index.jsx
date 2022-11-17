@@ -47,7 +47,9 @@ function TestsPage({
       ismainOpen={ismainOpen}
     >
       {currenttest}
-      {/* <NextTestBtnStyle>Keyingisi</NextTestBtnStyle> */}
+
+      <NextTestBtnStyle>Keyingisi</NextTestBtnStyle>
+      
     </TestStyle>
   );
 }

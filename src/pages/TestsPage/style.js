@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const TestStyle = styled.div`
   width: ${(props) => (props.ismainOpen ? "77vw" : "100vw")};
+  width: ${(props) => (props.isOpen ? "77vw" : "100vw")};
   margin-left: auto;
   min-height: 100vh;
   background-color: #e3d6ff;
@@ -181,20 +182,20 @@ export const VoiceSection = styled.div`
 export const NextTestBtnStyle = styled.button`
   width: 170px;
   height: 60px;
-  background-color: transparent;
-  border: 2px solid #df1cff;
   border-radius: 6px;
-  color: #df1cff;
   float: right;
   margin-left: auto;
   margin-right: 100px;
   font-size: 24px;
   letter-spacing: 1px;
   font-weight: 700;
+  background: linear-gradient(104.82deg, #c242ff 19.77%, #df1cff 81.27%);
+  color: white;
+  border-color: transparent;
   &:hover {
-    background-color: #df1cff;
-    color: #E3D6FF;
-    border-color: 2px solid #E3D6FF;
+    background: #E3D6FF;
+    border: 2px solid #df1cff;
+    color: #df1cff;
     margin-right: 90px;
   }
 `;
