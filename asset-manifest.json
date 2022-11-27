@@ -1,15 +1,20 @@
 {
   "files": {
     "main.css": "/voice_to_text/static/css/main.a78ad36d.css",
-    "main.js": "/voice_to_text/static/js/main.0809245b.js",
+    "main.js": "/voice_to_text/static/js/main.fe170174.js",
     "static/js/787.cae70fee.chunk.js": "/voice_to_text/static/js/787.cae70fee.chunk.js",
     "static/media/matchingImg_3.png": "/voice_to_text/static/media/matchingImg_3.066c599304823fccb20c.png",
     "static/media/matchingImg_4.png": "/voice_to_text/static/media/matchingImg_4.27060c335a8ec09eac29.png",
     "static/media/testpage_guys.png": "/voice_to_text/static/media/testpage_guys.333130d43c7f5ab11ee6.png",
     "static/media/matchingImg.png": "/voice_to_text/static/media/matchingImg.8f4e579ced981f3255fe.png",
+    "static/media/deletethisimage.jpg": "/voice_to_text/static/media/deletethisimage.d4dfd5d38983c573cbfb.jpg",
     "static/media/matchingImg_2.png": "/voice_to_text/static/media/matchingImg_2.06a490d163507033b540.png",
+    "static/media/manmemberpng.png": "/voice_to_text/static/media/manmemberpng.ab45eb1d42b1faaf3d12.png",
+    "static/media/womanmemberimg.png": "/voice_to_text/static/media/womanmemberimg.b078755c3606be916daa.png",
     "static/media/twitter.png": "/voice_to_text/static/media/twitter.da5d9bdae849285d229f.png",
     "static/media/google_icon.png": "/voice_to_text/static/media/google_icon.cb97e7f0ca5d739025b2.png",
+    "static/media/womanmemberpng.png": "/voice_to_text/static/media/womanmemberpng.515947da9e8f46e00e3f.png",
+    "static/media/hackermemberimg.png": "/voice_to_text/static/media/hackermemberimg.4124d026d0da868ba317.png",
     "static/media/numberTestImg.png": "/voice_to_text/static/media/numberTestImg.218298666797c08755be.png",
     "static/media/avatarImg.png": "/voice_to_text/static/media/avatarImg.9d518d7a990154e30aec.png",
     "static/media/facebook_icon.png": "/voice_to_text/static/media/facebook_icon.4f037d961598aff2a0a4.png",
@@ -28,11 +33,11 @@
     "static/media/titleopening.svg": "/voice_to_text/static/media/titleopening.2e0eb198ce599e3a4ee5d4df46fd6bd1.svg",
     "static/media/titleclosing.svg": "/voice_to_text/static/media/titleclosing.ac2b75521e0546594ea1131cd0b2f1f6.svg",
     "main.a78ad36d.css.map": "/voice_to_text/static/css/main.a78ad36d.css.map",
-    "main.0809245b.js.map": "/voice_to_text/static/js/main.0809245b.js.map",
+    "main.fe170174.js.map": "/voice_to_text/static/js/main.fe170174.js.map",
     "787.cae70fee.chunk.js.map": "/voice_to_text/static/js/787.cae70fee.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a78ad36d.css",
-    "static/js/main.0809245b.js"
+    "static/js/main.fe170174.js"
   ]
 }
