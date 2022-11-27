@@ -5,10 +5,10 @@ import MainPage from "./pages/MainPage/index";
 function App() {
   const userInfo = {
     name: "mahkamboy",
-    password: "kamila",
+    password: "parol",
   };
 
-  const [login, setLogin] = useState(true);
+  const [login, setLogin] = useState(false);
 
   const Logging = (e) => {
     e.preventDefault();
@@ -30,22 +30,16 @@ function App() {
 
   return (
     <div className="App">
-      {/* <MainPage /> */}
       {login ? (
-        <MainPage setLogin={setLogin}/>
+        <MainPage setLogin={setLogin} />
       ) : (
         <form className="login_form" onSubmit={Logging}>
           <h2>Hello bro😎</h2>
           <input type="text" name="name" placeholder="Enter username" />
-          <input
-            type="password"
-            name="password"
-            placeholder="Enter password"
-          />
+          <input type="password" name="password" placeholder="Enter password" />
           <button type="submit">come</button>
         </form>
       )}
-      {/* <Login /> */}
     </div>
   );
 }

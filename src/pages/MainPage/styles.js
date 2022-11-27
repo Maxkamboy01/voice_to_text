@@ -61,6 +61,7 @@ export const SidebarStyle = styled.ul`
       font-size: 18px;
       padding: 15px 84px 15px 25px;
     }
+
     @media (max-width: 512px) {
       font-size: 16px;
       padding: 14px 44px 14px 20px;
@@ -68,7 +69,16 @@ export const SidebarStyle = styled.ul`
     &:hover {
       background-color: #e5bef3;
       a {
-        color: white;
+        svg {
+          color: white;
+        }
+      }
+    }
+    a {
+      width: 100%;
+      height: 100%;
+      svg {
+        transition-duration: 0s;
       }
     }
   }

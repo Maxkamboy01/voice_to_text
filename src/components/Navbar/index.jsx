@@ -53,10 +53,12 @@ function Navbar({
   };
   return (
     <NavbarStyle className="navbar">
-      <AiOutlineMenu
-        onClick={() => sidebarHandleclick()}
-        className="sidebar_btn"
-      />
+      <div className="sidebar_btn">
+        <AiOutlineMenu
+          className="sidebar_icon"
+          onClick={() => sidebarHandleclick()}
+        />  
+      </div>
       <div className="logo">
         <img src={Logo} alt="" />
       </div>

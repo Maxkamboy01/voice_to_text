@@ -190,10 +190,11 @@ export const NextTestBtnStyle = styled.button`
   letter-spacing: 1px;
   font-weight: 700;
   background: linear-gradient(104.82deg, #c242ff 19.77%, #df1cff 81.27%);
+  box-shadow: 2px 0px 8px rgba(128, 0, 255, 0.23);
   color: white;
   border-color: transparent;
   &:hover {
-    background: #E3D6FF;
+    background: #e3d6ff;
     border: 2px solid #df1cff;
     color: #df1cff;
     margin-right: 90px;

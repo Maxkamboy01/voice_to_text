@@ -18,7 +18,7 @@ export const NavbarStyle = styled.div`
   box-shadow: 0 0 10px grey;
   z-index: 1111;
   position: sticky;
-  top:0;
+  top: 0;
   @media (max-width: 768px) {
     width: 100vw;
     height: 66px;
@@ -30,13 +30,31 @@ export const NavbarStyle = styled.div`
     padding-left: 16px;
   }
   .sidebar_btn {
-    font-size: 32px;
-    cursor: pointer;
-    @media (max-width: 768px) {
-      font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px;
+    border-radius: 50%;
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.24);
+      .sidebar_icon {
+        transform: scale(1.1);
+        fill: white;
+      }
     }
-    @media (max-width: 512px) {
-      font-size: 28px;
+    .sidebar_icon {
+      width: 90%;
+      font-size: 32px;
+      cursor: pointer;
+      transition: fill ease 0s;
+      transition: transform ease 300ms;
+
+      @media (max-width: 768px) {
+        font-size: 30px;
+      }
+      @media (max-width: 512px) {
+        font-size: 28px;
+      }
     }
   }
 

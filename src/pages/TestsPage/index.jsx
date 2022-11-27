@@ -49,9 +49,10 @@ function TestsPage({
       {currenttest}
 
       <NextTestBtnStyle>Keyingisi</NextTestBtnStyle>
-      
     </TestStyle>
   );
+
+  
 }
 
 export default TestsPage;

@@ -47,7 +47,7 @@ function Speechkit(props) {
     SpeechRecognition.stopListening();
     setresetvalue(true);
     //
-    if (transcript.toString().includes(textvalue.toString())) {
+    if (transcript.toLowerCase().toString().includes(textvalue.toLowerCase().toString())) {
       settingcorrect();
       console.log(transcript);
     } else {
@@ -58,7 +58,7 @@ function Speechkit(props) {
 
   const redoTest = (e) => {
     e.preventDefault();
-    setresetvalue(true);
+    setresetvalue(false);
   };
 
   const nextTest = (e) => {
@@ -74,6 +74,7 @@ function Speechkit(props) {
   };
 
   // volume functions
+  let utterThis = new SpeechSynthesisUtterance(textvalue);
   const rangeOpened = () => {
     if (volumeOpened) {
       setvolumeOpened(false);
@@ -81,11 +82,14 @@ function Speechkit(props) {
       setvolumeOpened(true);
     }
     // setvolumeOpened(!volumeOpened);
-    console.log(volumeOpened);
   };
 
-  const utterThis = new SpeechSynthesisUtterance(textvalue);
-  utterThis.volume = volumeValue;
+  const VolumeChange = (e) => {
+    setVolumeValue(e.target.value);
+    utterThis.volume = volumeValue;
+    console.log(e);
+
+  };
 
   return (
     <div
@@ -232,8 +236,7 @@ function Speechkit(props) {
             >
               <input
                 type="range"
-                onChange={(e) => setVolumeValue(e.target.value)}
-                value={0.5}
+                onChange={(e) => VolumeChange(e)}
                 name="volume_range"
                 className="volume_range"
                 id="volume_range"
