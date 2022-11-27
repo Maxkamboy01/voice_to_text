@@ -4,20 +4,20 @@ import MemberImg from "../../assets/manmemberpng.png";
 import WomenmemberImg from "../../assets/womanmemberimg.png";
 import Womenmemberimg from "../../assets/womanmemberpng.png";
 import Hackermemberimg from "../../assets/hackermemberimg.png";
-import DeleteThisImg from "../../assets/deletethisimage.jpg";
 import {
   AiFillFacebook,
   AiFillTwitterSquare,
   AiOutlineInstagram,
 } from "react-icons/ai";
 import { FaTelegramPlane } from "react-icons/fa";
+import HiddenGallery from "../../components/hiddenGallery";
 
 function AuthorPage({ isOpen, ismainOpen, closemainSideBar, closeSideBar }) {
   const closeLeftBars = () => {
     closemainSideBar(false);
     closeSideBar(false);
   };
-
+  const [hiddenGallery, sethiddenGallery] = useState(false);
   const [kamilaOpened, setkamilaOpened] = useState(false);
   return (
     <AuthorpageStyle
@@ -34,7 +34,7 @@ function AuthorPage({ isOpen, ismainOpen, closemainSideBar, closeSideBar }) {
       <div className="container members_box">
         <div className="member_box">
           <div className="image_box">
-            <img src={MemberImg} alt="" />
+            <img className="imagetag" src={MemberImg} alt="" />
           </div>
           <h2 className="member_name">Ranchodas Chanchad</h2>
           <p className="member_job">creative leader</p>
@@ -60,7 +60,7 @@ function AuthorPage({ isOpen, ismainOpen, closemainSideBar, closeSideBar }) {
         </div>
         <div className="member_box">
           <div className="image_box">
-            <img src={WomenmemberImg} alt="" />
+            <img className="imagetag" src={WomenmemberImg} alt="" />
           </div>
           <h2 className="member_name">Ranchodas Chanchad</h2>
           <p className="member_job">creative leader</p>
@@ -86,7 +86,7 @@ function AuthorPage({ isOpen, ismainOpen, closemainSideBar, closeSideBar }) {
         </div>
         <div className="member_box">
           <div className="image_box">
-            <img src={Womenmemberimg} alt="" />
+            <img className="imagetag" src={Womenmemberimg} alt="" />
           </div>
           <h2 className="member_name">Ranchodas Chanchad</h2>
           <p className="member_job">creative leader</p>
@@ -113,17 +113,25 @@ function AuthorPage({ isOpen, ismainOpen, closemainSideBar, closeSideBar }) {
         </div>
         <div className="member_box">
           <div className="image_box">
-            <img
+            {hiddenGallery ? (
+              <HiddenGallery setgalleryOpened={sethiddenGallery} />
+            ) : (
+              <img
+                className="imagetag"
+                onDoubleClick={() => sethiddenGallery(!hiddenGallery)}
+                src={Hackermemberimg}
+                alt=""
+              />
+            )}
+
+            {/* <img
               // lishneye
               onDoubleClick={() => setkamilaOpened(!kamilaOpened)}
               src={kamilaOpened ? DeleteThisImg : Hackermemberimg}
               // lishneye
               alt=""
-            />
+            /> */}
           </div>
-          {/* LISHNEYE */}
-          <h3>{kamilaOpened ? "AJJI KUKKUUU😜" : ""}</h3>
-          {/* LISHNEYE */}
 
           <h2 className="member_name">Ranchodas Chanchad</h2>
           <p className="member_job">creative leader</p>

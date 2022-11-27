@@ -108,13 +108,14 @@ export const AuthorpageStyle = styled.div`
         border-radius: 50%;
         overflow: hidden;
         padding: 5px;
+        position:relative;
         @media (max-width: 768px) {
           margin-bottom: 13px;
         }
         @media (max-width: 512px) {
           margin-bottom: 12px;
         }
-        img {
+        .imagetag {
           width: 70%;
           height: auto;
           @media (max-width: 768px) {

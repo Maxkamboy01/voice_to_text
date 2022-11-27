@@ -4,11 +4,11 @@ import MainPage from "./pages/MainPage/index";
 
 function App() {
   const userInfo = {
-    name: "mahkamboy",
+    name: "maxkamboy",
     password: "parol",
   };
 
-  const [login, setLogin] = useState(false);
+  const [login, setLogin] = useState(true);
 
   const Logging = (e) => {
     e.preventDefault();
